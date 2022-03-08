@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    height: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/*-----Variables-----*/
+:root {
+    --main-padding: 20.6vw 5vw;
+    --color-black: #23272a; 
+    --color-black2: #181818;
+    --color-blue:#0071bb;
+    --color-lightblue:#2cbbf2;
+    --color-lightblue2:#16b4f0;
+    --font-family-title: 'Montserrat', sans-serif;
+    --font-family-subtitle: 'Fira Sans', sans-serif;
+    --font-family-text: 'Hind Madurai', sans-serif;
+}
+
+/*-----MENU-----*/
+.navbar{
+    font-family:var(--font-family-text);
+    font-size: 1.1vw;
+    letter-spacing: 2.5px;
+    margin: 1.5vw;
+}
+.dropdown-menu :hover{
+background-color: var(--color-lightblue2);
+}
+
+/*****INDEX*****/
+.main-title{
+    font-family: var(--font-family-title);
+    font-size: 6vw;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 5;
+    line-height: 7vw;
+}
