@@ -4,12 +4,14 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 html, body {
     height: 100%;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /*-----Variables-----*/
+
 :root {
     --main-padding: 20.6vw 5vw;
     --color-black: #23272a; 
@@ -23,6 +25,7 @@ html, body {
 }
 
 /*-----MENU-----*/
+
 .navbar{
     font-family:var(--font-family-text);
     font-size: 1.1vw;
@@ -33,14 +36,342 @@ html, body {
 background-color: var(--color-lightblue2);
 }
 
+.navbar-light .navbar-nav .nav-link{
+    color: var(--color-black2);
+}
+
 /*****INDEX*****/
-.main-title{
+
+.container{
+max-width: 90vw;
+width: 100%;
+margin:auto;
+}
+
+.home{
+height: 90vh;
+background-size: cover;
+background-position: center;
+display: flex;
+flex-wrap: wrap;
+position: relative;
+}
+.home::before{
+content: '';
+position: absolute;
+left:0;
+top:0;
+width: 100%;
+height: 100%;
+z-index: 1;
+}
+
+.home .home-text{
+position: relative;
+z-index: 2;
+font-family: var(--font-family-title);
+font-size: 6vw;
+font-weight: 500;
+line-height: 7vw;
+margin-right: 15vw;
+}
+
+.home .home-text h1{
+	color:var(--color-black);
+	font-size: 6vw;
+	line-height: 56px;
+	font-weight: 700;
     font-family: var(--font-family-title);
     font-size: 6vw;
     font-weight: 500;
-    line-height: 1.1;
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 5;
     line-height: 7vw;
+}
+
+.home .home-text p{
+	margin:0;
+	overflow: hidden;
+}
+
+.home .home-text p span{
+    font-family: var(--font-family-title);
+    font-size: 6vw;
+    font-weight: 500;
+    line-height: 7vw;
+    color:var(--color-black);
+    font-weight: 700;
+    display: inline-block;
+    line-height: 7vw;
+    display: none;
+}
+
+.get-it{
+    color: var(--color-blue);
+}
+
+.home .home-text p span.text-in{
+	display: block;
+	animation: textIn .5s ease;
+}
+
+.home .home-text p span.text-out{
+	animation: textOut .5s ease;
+}
+
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
+
+	}
+}
+
+/*****CONTACT*****/
+
+.body-contact {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+}
+
+#contact {
+    width: 100%;
+    height: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-family: var(--font-family-title);
+    font-size: 4vw;
+    color: var(--color-black);
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: var(--font-family-text);
+    font-weight: 400;
+}
+
+.form-control, 
+textarea {
+    max-width: 400px;
+    background-color:#fff;
+    color: var(--color-black2);
+    letter-spacing: 1px;
+    margin-top: 1vw;
+    resize: none;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+    max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.list-item {
+    line-height: 4;
+    color: #aaa;
+}
+
+.contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #bbb;
+}
+
+.place {
+    margin-left: 62px;
+}
+
+.phone {
+    margin-left: 56px;
+}
+
+.gmail {
+    margin-left: 53px;
+}
+
+.contact-text a {
+    color: #bbb;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+
+hr {
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+.g-recaptcha{
+    margin-top: 1vw;
+}
+
+
+/* Begin Media Queries CONTACT*/
+@media screen and (max-width: 850px) {
+    .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    }
+    .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+    }  
+    
+    .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+    }    
+}
+
+@media screen and (max-width: 569px) {
+
+    .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+    }  
+    .form-control, textarea {
+    
+    margin: 0 auto;
+    }
+
+    
+    .name, .email, textarea {
+    width: 280px;
+    } 
+    
+    .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+    }  
+    
+}
+
+
+
+@media screen and (max-width: 410px) {
+    .send-button {
+    width: 99%;
+    }
+}
+
+/*-----MEDIA QUERYS-----*/
+
+@media screen and (max-width: 410px) {
+    .send-button {
+    width: 99%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .nav-item a{
+        font-size: 5vw;
+    }
+    .direct-contact-container, .form-wrapper {
+        float: none;
+        margin: 0 auto;
+        }  
+    .form-control, textarea {
+    
+    margin: 0 auto;
+    }
+
+    
+    .name, .email, textarea {
+    width: 280px;
+    } 
+    
+    .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+    }  
+    
+}
+
+
+@media screen and (min-width: 650px) and (max-width:1000px){
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        }
+        .direct-contact-container, .form-horizontal {
+        margin: 0 auto;
+        }  
+        
+        .direct-contact-container {
+        margin-top: 60px;
+        max-width: 300px;
+        }    
+}
+@media screen 
+    and (min-width: 1010px)
+    and (max-width: 1200px) 
+    and (max-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+    .nav-item a{
+        font-size: 2.5vw;
+    }
 }

@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/style.css">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
     <link rel="preload" as="image" href="" />
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,9 +64,59 @@
             </nav>
     </header>
     <main>
-        <h1 class="main-title"> <strong> We </strong> <br> <strong>Get IT</strong> <br> <strong> Done</strong></h1>
+    <section class="home">
+        <div class="container">
+        <div class="row">
+            <div class="home-text">
+                    <h1><strong>We</strong><br><strong><span class="get-it">Get IT</span></h1>
+                    <p class="animate-text">
+                        <span>Delivered</span>
+                        <span>Retrieved</span>
+                        <span>Storaged</span>
+                        <span>Kitted</span>
+                        <span>Wiped</span>
+                        <span>Done</span>
+                    </p>
+            </div>
+        </div>
+        </div>
+    </section>    
     </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/main.js"></script>
+    <script>
+        const txts=document.querySelector(".animate-text").children,
+        txtsLen=txts.length;
+        let index=0;
+        const textInTimer=3000,
+        textOutTimer=2800;
+
+        function animateText() {
+            for(let i=0; i<txtsLen; i++){
+                txts[i].classList.remove("text-in","text-out");  
+            }
+            txts[index].classList.add("text-in");
+
+            setTimeout(function(){
+                txts[index].classList.add("text-out");              
+            },textOutTimer)
+
+            setTimeout(function(){
+
+                if(index == txtsLen-1){
+                    index=0;
+                }
+                else{
+                    index++;
+                }
+                animateText();
+            },textInTimer); 
+        }
+        
+        window.onload=animateText;
+
+</script>
+
 </body>
 </html>
