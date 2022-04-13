@@ -79,11 +79,8 @@ margin-right: 15vw;
 .home .home-text h1{
 	color:var(--color-black);
 	font-size: 6vw;
-	line-height: 56px;
-	font-weight: 700;
+	font-weight: 900;
     font-family: var(--font-family-title);
-    font-size: 6vw;
-    font-weight: 500;
     line-height: 7vw;
 }
 
@@ -98,9 +95,8 @@ margin-right: 15vw;
     font-weight: 500;
     line-height: 7vw;
     color:var(--color-black);
-    font-weight: 700;
+    font-weight: 900;
     display: inline-block;
-    line-height: 7vw;
     display: none;
 }
 
@@ -270,6 +266,64 @@ hr {
 }
 
 
+/*-----MEDIA QUERYS-----*/
+
+@media screen and (max-width: 410px) {
+    .send-button {
+    width: 99%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .nav-item a{
+        font-size: 5vw;
+    }
+    .direct-contact-container, .form-wrapper {
+        float: none;
+        margin: 0 auto;
+        }  
+    .form-control, textarea {
+    
+    margin: 0 auto;
+    }
+    
+    .name, .email, textarea {
+    width: 280px;
+    } 
+    
+    .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+    }  
+    
+}
+
+@media screen and (min-width: 650px) and (max-width:1000px){
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        }
+        .direct-contact-container, .form-horizontal {
+        margin: 0 auto;
+        }  
+        
+        .direct-contact-container {
+        margin-top: 60px;
+        max-width: 300px;
+        }    
+}
+
+@media screen 
+    and (min-width: 1010px)
+    and (max-width: 1200px) 
+    and (max-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+    .nav-item a{
+        font-size: 2.5vw;
+    }
+}
+
+
 /* Begin Media Queries CONTACT*/
 @media screen and (max-width: 850px) {
     .contact-wrapper {
@@ -307,71 +361,4 @@ hr {
     max-width: 280px;
     }  
     
-}
-
-
-
-@media screen and (max-width: 410px) {
-    .send-button {
-    width: 99%;
-    }
-}
-
-/*-----MEDIA QUERYS-----*/
-
-@media screen and (max-width: 410px) {
-    .send-button {
-    width: 99%;
-    }
-}
-
-
-@media screen and (max-width: 600px){
-    .nav-item a{
-        font-size: 5vw;
-    }
-    .direct-contact-container, .form-wrapper {
-        float: none;
-        margin: 0 auto;
-        }  
-    .form-control, textarea {
-    
-    margin: 0 auto;
-    }
-
-    
-    .name, .email, textarea {
-    width: 280px;
-    } 
-    
-    .direct-contact-container {
-    margin-top: 60px;
-    max-width: 280px;
-    }  
-    
-}
-
-
-@media screen and (min-width: 650px) and (max-width:1000px){
-    .contact-wrapper {
-        display: flex;
-        flex-direction: column;
-        }
-        .direct-contact-container, .form-horizontal {
-        margin: 0 auto;
-        }  
-        
-        .direct-contact-container {
-        margin-top: 60px;
-        max-width: 300px;
-        }    
-}
-@media screen 
-    and (min-width: 1010px)
-    and (max-width: 1200px) 
-    and (max-width: 1600px) 
-    and (-webkit-min-device-pixel-ratio: 1) { 
-    .nav-item a{
-        font-size: 2.5vw;
-    }
 }
