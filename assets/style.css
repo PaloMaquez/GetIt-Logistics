@@ -40,7 +40,7 @@ background-color: var(--color-lightblue2);
     color: var(--color-black2);
 }
 
-/*****INDEX*****/
+/*-----INDEX-----*/
 
 .container{
 max-width: 90vw;
@@ -132,7 +132,7 @@ margin-right: 15vw;
 	}
 }
 
-/*****CONTACT*****/
+/*-----CONTACT-----*/
 
 .body-contact {
     margin: 0;
@@ -265,7 +265,6 @@ hr {
     margin-top: 1vw;
 }
 
-
 /*-----MEDIA QUERYS-----*/
 
 @media screen and (max-width: 410px) {
@@ -350,7 +349,6 @@ hr {
     
     margin: 0 auto;
     }
-
     
     .name, .email, textarea {
     width: 280px;
@@ -361,4 +359,46 @@ hr {
     max-width: 280px;
     }  
     
+}
+
+
+
+
+.outer-wrapper{
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style:none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+.one{
+    background-color: #0071bb;
+}
+.two{
+    background-color: #16b4f0;
+}
+.three{
+    background-color: #181818;
+}
+.four{
+    background-color: #23272a;
 }
