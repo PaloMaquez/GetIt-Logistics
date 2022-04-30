@@ -24,6 +24,54 @@ html, body {
     --font-family-text: 'Hind Madurai', sans-serif;
 }
 
+/*-----PRELOADERS-----*/
+
+#preloader{ /*index*/
+    background:white url(../assets/img/preloaders/preloader.gif) no-repeat center center;
+    background-size: 20%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader-2{ /*kitted*/
+    background:white url(../assets/img/preloaders/kitted-preload.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader-3{ /*contact*/
+    background:white url(../assets/img/preloaders/contact-preloader.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader-4{ /*wiped*/
+    background:white url(../assets/img/preloaders/wiped-preloader.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader-5{ /*warehoused*/
+    background:white url(../assets/img/preloaders/warehoused-preloader.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+
 /*-----MENU-----*/
 
 .navbar{
@@ -42,15 +90,12 @@ background-color: var(--color-lightblue2);
 
 /*-----INDEX-----*/
 
-/* .pic{
-    background-image: url('https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
+.pic{
+    background-image: url('./img/index-background.jpg');
     object-fit:cover;
     background-repeat: no-repeat;
     background-size: cover;
-} */
+}
 
 .container{
 max-width: 90vw;
@@ -373,15 +418,6 @@ hr {
     max-width: 280px;
     }  
     
-}
-
-#preloader{
-    background:white url(../assets/img/preloader.gif) no-repeat center center;
-    background-size: 20%;
-    height: 110vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
 }
 
 /* 
