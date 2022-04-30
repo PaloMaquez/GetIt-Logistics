@@ -24,7 +24,8 @@
     <meta property="og:locale" content="en_US">
     <title>Get IT Logistics | Get IT Done.</title>
 </head>
-<body class="pic">
+<body>
+    <div id="preloader"></div>
     <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                 <div class="container-fluid d-lg-flex">
@@ -41,16 +42,8 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Services
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="./views/delivered.html">Get IT Delivered</a></li>
-                                <li><a class="dropdown-item" href="./views/retrieved.html">Get IT Retrieved</a></li>
-                                <li><a class="dropdown-item" href="./views/storaged.html">Get IT Storaged</a></li>
-                                <li><a class="dropdown-item" href="./views/kitted.html">Get IT Kitted</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./views/services.html">Services</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="./views/about.html">About</a>
@@ -70,12 +63,12 @@
             <div class="home-text">
                     <h1><strong>We</strong><br><strong><span class="get-it">Get IT</span></h1>
                     <p class="animate-text">
-                        <span>Delivered</span>
-                        <span>Retrieved</span>
-                        <span>Storaged</span>
-                        <span>Kitted</span>
-                        <span>Wiped</span>
-                        <span>Done</span>
+                        <span class="animate-span"><strong>Delivered</strong></span>
+                        <span class="animate-span"><strong>Retrieved</strong></span>
+                        <span class="animate-span"><strong>Warehoused</strong></span>
+                        <span class="animate-span"><strong>Kitted</strong></span>
+                        <span class="animate-span"><strong>Wiped</strong></span>
+                        <span class="animate-span"><strong>Done</strong></span>
                     </p>
             </div>
         </div>
@@ -115,6 +108,15 @@
         }
         
         window.onload=animateText;
+</script>
+
+<script>
+
+var loader = document.getElementById('preloader');
+
+window.addEventListener('load' , function(){
+    loader.style.display = "none";
+})
 
 </script>
 

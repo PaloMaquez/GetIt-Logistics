@@ -42,6 +42,16 @@ background-color: var(--color-lightblue2);
 
 /*-----INDEX-----*/
 
+/* .pic{
+    background-image: url('https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 .container{
 max-width: 90vw;
 width: 100%;
@@ -77,7 +87,7 @@ margin-right: 15vw;
 }
 
 .home .home-text h1{
-	color:var(--color-black);
+	color:black;
 	font-size: 6vw;
 	font-weight: 900;
     font-family: var(--font-family-title);
@@ -94,7 +104,7 @@ margin-right: 15vw;
     font-size: 6vw;
     font-weight: 500;
     line-height: 7vw;
-    color:var(--color-black);
+    color:black;
     font-weight: 900;
     display: inline-block;
     display: none;
@@ -111,6 +121,10 @@ margin-right: 15vw;
 
 .home .home-text p span.text-out{
 	animation: textOut .5s ease;
+}
+
+span .animate-span{
+    color:var(--color-black);
 }
 
 @keyframes textIn{
@@ -361,9 +375,16 @@ hr {
     
 }
 
+#preloader{
+    background:white url(../assets/img/preloader.gif) no-repeat center center;
+    background-size: 20%;
+    height: 110vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 
-
-
+/* 
 .outer-wrapper{
     width: 100vh;
     height: 100vw;
@@ -401,4 +422,4 @@ hr {
 }
 .four{
     background-color: #23272a;
-}
+} */
