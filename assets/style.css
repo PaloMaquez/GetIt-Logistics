@@ -36,7 +36,7 @@ html, body {
 }
 
 #preloader-2{ /*kitted*/
-    background:white url(../assets/img/preloaders/kitted-preload.gif) no-repeat center center;
+    background:white url(../assets/img/preloaders/kitted.gif) no-repeat center center;
     background-size: 10%;
     height: 100%;
     width: 100%;
@@ -71,7 +71,6 @@ html, body {
     z-index: 100;
 }
 
-
 /*-----MENU-----*/
 
 .navbar{
@@ -91,10 +90,11 @@ background-color: var(--color-lightblue2);
 /*-----INDEX-----*/
 
 .pic{
-    background-image: url('./img/index-background.jpg');
-    object-fit:cover;
+    background-image: url(./img/index-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
 }
 
 .container{
@@ -132,7 +132,7 @@ margin-right: 15vw;
 }
 
 .home .home-text h1{
-	color:black;
+	color:white;
 	font-size: 6vw;
 	font-weight: 900;
     font-family: var(--font-family-title);
@@ -149,7 +149,7 @@ margin-right: 15vw;
     font-size: 6vw;
     font-weight: 500;
     line-height: 7vw;
-    color:black;
+    color:white;
     font-weight: 900;
     display: inline-block;
     display: none;
