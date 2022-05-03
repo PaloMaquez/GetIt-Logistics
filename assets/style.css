@@ -79,13 +79,13 @@ html, body {
     letter-spacing: 2.5px;
     margin: 1.5vw;
 }
-.dropdown-menu :hover{
-background-color: var(--color-lightblue2);
-}
 
 .navbar-light .navbar-nav .nav-link{
     color: var(--color-black2);
 }
+/* .navbar-light .navbar-nav .nav-link:hover{
+
+} */
 
 /*-----INDEX-----*/
 
@@ -95,6 +95,9 @@ background-color: var(--color-lightblue2);
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
+    height: 90vh;
+    width: 100%;
+
 }
 
 .container{
@@ -189,6 +192,105 @@ span .animate-span{
 		transform: translateY(-100%);
 
 	}
+}
+
+/*-----SERVICES-----*/
+.background-grid{
+    background-color: #4a80c11f;
+}
+
+.band {
+    width: 90%;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 5vw;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    min-height: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: #4a7fc1;
+    position: relative;
+    top: 0;
+    border: none;
+    border: #181818;
+    transition: all .1s ease-in;
+}
+
+.card:hover {
+    top: -2px;
+    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.582);
+}
+
+.card .thumb {
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.main-title-card{
+    font-family: var(--font-family-text);
+    font-size: 3vw !important;
+    background-color: transparent;
+    margin: 0;
+    color: white;
+    line-height: 3vw;
+    margin-top: -9vw;
+    margin-left: 3vw;
+}
+
+.flex-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-shrink: 1;
+    position: relative;
+    bottom: 3vw;
+    left: 18vw;
+}
+
+@media only screen and (max-width: 500px) {
+    .band {
+        grid-template-columns: 1fr 1fr;
+    }  
+    .item-1 {
+    grid-column: 1/ span 3;
+    }
+    .item-1 h1 {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .band {
+        grid-template-columns: 1fr 1fr;
+    }  
+    .item-1 {
+    grid-column: 1/ span 3;
+    }
+    .item-1 h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .band {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 /*-----CONTACT-----*/
@@ -459,3 +561,4 @@ hr {
 .four{
     background-color: #23272a;
 } */
+
