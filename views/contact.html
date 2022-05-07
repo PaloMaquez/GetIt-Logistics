@@ -90,12 +90,24 @@
                 <div class="g-recaptcha" data-sitekey="6LckFwAfAAAAAJpi_PR38ja0B3yUPybGbv024smX"></div>
             </section>
             
-            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-                <div class="alt-send-button">
-                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-                </div>
-            
-            </button>
+<!-- partial:index.partial.html -->
+<button class="order"><span class="default">Send IT</span><span class="success">Sent
+    <svg viewbox="0 0 12 10">
+      <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+    </svg></span>
+  <div class="box"></div>
+  <div class="truck">
+    <div class="back"></div>
+    <div class="front">
+      <div class="window"></div>
+    </div>
+    <div class="light top"></div>
+    <div class="light bottom"></div>
+  </div>
+  <div class="lines"></div>
+</button>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
             
             </form>
             
@@ -120,11 +132,7 @@
         </section>  
     </main>
     <footer>
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5cxbDbKMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5cxbDbKMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5cxbDbKMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5cxbDbKMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1D5cxbDbKMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../assets/main.js"></script>
@@ -133,6 +141,20 @@
         window.addEventListener('load' , function(){
             loader.style.display = "none";
         })
+    </script>
+    <script>
+        $('.order').click(function(e) {
+
+let button = $(this);
+
+if(!button.hasClass('animate')) {
+    button.addClass('animate');
+    setTimeout(() => {
+        button.removeClass('animate');
+    }, 10000);
+}
+
+});
     </script>
 </body>
 </html>  
