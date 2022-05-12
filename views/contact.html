@@ -61,79 +61,79 @@
             </nav>
     </header>
     <main>
+        <div class="main-contact">
+            <div class="title-cont">
+                <h1 class="section-header">Contact</h1>
+                <p class="contact-p">
+                    To learn more about Get It Logistics, visit our Services page. If you have any questions or comment please fill in the contact form and we'll get back to you soon.
+                </p>     
+            </div>
+            <img src="https://images.unsplash.com/photo-1543996991-8e851c2dc841?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="" no-repeat center center class="contact-img">
+        </div>
         
-    <section id="contact">
+        <section id="contact">
 
-        <h1 class="section-header">Get In Touch</h1>
-        
         <div class="contact-wrapper">
-        
+
         <!-- Left contact page --> 
             
             <form id="contact-form" class="form-horizontal" role="form">
                 
             <div class="form-group">
                 <div class="col-sm-12">
-                <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="" required>
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
                 </div>
             </div>
-        
+
             <div class="form-group">
                 <div class="col-sm-12">
-                <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="" required>
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
                 </div>
             </div>
-        
-            <textarea class="form-control" rows="10" placeholder="Message" name="message" required></textarea>
 
-            <section action="?" method="POST">
+            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
                 <div class="g-recaptcha" data-sitekey="6LckFwAfAAAAAJpi_PR38ja0B3yUPybGbv024smX"></div>
-            </section>
             
-<!-- partial:index.partial.html -->
-<button class="order"><span class="default">Send IT</span><span class="success">Sent
-    <svg viewbox="0 0 12 10">
-      <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-    </svg></span>
-  <div class="box"></div>
-  <div class="truck">
-    <div class="back"></div>
-    <div class="front">
-      <div class="window"></div>
-    </div>
-    <div class="light top"></div>
-    <div class="light bottom"></div>
-  </div>
-  <div class="lines"></div>
-</button>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                <div class="alt-send-button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                </div>
+            
+            </button>
             
             </form>
             
         <!-- Left contact page --> 
             
             <div class="direct-contact-container">
-        
+
                 <ul class="contact-list">
-
                 <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Flower Mound, Texas</span></i></li>
-
-                <!-- <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give us a call">(212) 555-2368</a></span></i></li> -->
                 
-                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:contact@getitlogistics.com" title="Send us an email">contact@getitlogistics.com</a></span></i></li>
+                <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+                
+                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">getitlogistics@gmail.com</a></span></i></li>
                 
                 </ul>
-                
+
+                <hr>
+                    <ul class="social-media-list">
+                    </ul>
+                <hr>
             </div>
-            
         </div>
-        
-        </section>  
+
+        </section>
+    <!-- partial -->
+            <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </main>
     <footer>
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../assets/main.js"></script>
     <script>
@@ -142,19 +142,19 @@
             loader.style.display = "none";
         })
     </script>
+
     <script>
         $('.order').click(function(e) {
 
-let button = $(this);
+        let button = $(this);
 
-if(!button.hasClass('animate')) {
-    button.addClass('animate');
-    setTimeout(() => {
-        button.removeClass('animate');
-    }, 10000);
-}
-
-});
+        if(!button.hasClass('animate')) {
+            button.addClass('animate');
+            setTimeout(() => {
+                button.removeClass('animate');
+            }, 10000);
+        }
+        });
     </script>
 </body>
 </html>  
