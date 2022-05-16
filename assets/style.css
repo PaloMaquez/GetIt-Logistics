@@ -32,6 +32,7 @@ html, body {
     --white: #FFF;
     --sand: #DCB773;
     --sand-light: #EDD9A9;
+    --line-active: #0071bb;
 }
 
 /*-----PRELOADERS-----*/
@@ -314,36 +315,33 @@ span .animate-span{
 
 /*-----CONTACT-----*/
 
+#contact {
+  width: 100%;
+  height: 100%;
+}
+
 .main-contact{
   display: flex;
   flex-direction: row;
   padding-bottom: 20vw;
 }
 
-.title-cont{
-  background-color: white;
-  padding: 5vw 5vw 5vw 5vw;
-}
-.contact-p{
-  font-family: var(--font-family-text);
-  font-size: 30px;
-  line-height: 28px;
-  text-align: start;
-}
-
-.contact-img{
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  top: 14vh;
-  bottom: 0;
-  right: 0;
-  width: 70%;
+.text-contact{
+  background-color: rgb(255, 255, 255);
+  padding-right: 10vw;
+  padding-top: 1vh;
+  padding-left: 1%;
+  position: relative;
+  width: 43vw;
+  height: 45vh;
+  left:3vw;
+  top: 11vh;
+  z-index: 2;
 }
 
-#contact {
-  width: 100%;
-  height: 100%;
+.text-container{
+  margin-left: 15vw;
+  margin-top: 5vw;
 }
 
 .section-header {
@@ -351,11 +349,65 @@ span .animate-span{
   margin: 0 auto;
   padding: 40px 0;
   font-family: var(--font-family-title);
-  font-size: 80px;
+  font-size: 90px;
   color: var(--color-black3);
   text-transform: uppercase;
   letter-spacing: 6px;
   margin-bottom: 2vw;
+}
+
+
+.contact-p{
+  font-family: var(--font-family-text);
+  font-size: 23px;
+  /* word-spacing:5px; */
+  line-height: 28px;
+  padding-right: 5vw;
+  text-align:start;
+  margin-left: 5%;
+  width: 30vw;
+}
+
+/*text efect*/
+
+p a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 var(--spacing, 0px);
+  transition: margin 0.25s;
+}
+p a svg {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 7px) translateZ(0);
+  fill: none;
+  stroke: var(--stroke, var(--color-lightblue2));
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: var(--offset, 69px) 278px;
+  stroke-dashoffset: 361px;
+  transition: stroke 0.25s ease var(--stroke-delay, 0s), stroke-dasharray 0.35s;
+}
+p a:hover {
+  --spacing: 4px;
+  --stroke: var(--line-active);
+  --stroke-delay: .1s;
+  --offset: 180px;
+}
+/*------*/
+
+.contact-img{
+  width: 70vw;
+  height: 70vh;
+  position: absolute;
+  top: 13vh;
+  bottom: 0;
+  right: 0;
 }
 
 .contact-wrapper {
@@ -379,10 +431,10 @@ span .animate-span{
 .form-control, 
 textarea {
   max-width: 400px;
-  color: black;
+  border-color: #000;
   letter-spacing: 1px;
-  margin-bottom: 1vw;
-  border: 2px solid;
+  margin-bottom: 1.5vw;
+  border-width: 0 0 2px 0;
 }
 
 .send-button {
@@ -405,6 +457,12 @@ textarea {
   margin-top: 10px;
   font: 700 12px 'Lato', sans-serif;
   letter-spacing: 2px;
+}
+
+.btn-primary {
+  color: rgb(255, 255, 255);
+  background-color: var(--color-lightblue2);
+  border-color: rgb(13, 110, 253);
 }
 
 .alt-send-button:hover {
@@ -457,62 +515,35 @@ textarea {
   color: var(--color-lightblue);
   text-decoration: none;
 }
-/* 
 
-/* Social Media Icons */
-.social-media-list {
-  position: relative;
-  font-size: 22px;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-
-
-.social-media-list li {
-  position: relative; 
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  margin: 10px 3px;
-  line-height: 60px;
-  border-radius: 50%;
-  color: #fff;
-  background-color: rgb(27,27,27);
-  cursor: pointer; 
-  transition: all .2s ease-in-out;
-}
-
-.social-media-list li:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 50%;
-  opacity: 0;
-  box-shadow: 0 0 0 1px #fff;
-  transition: all .2s ease-in-out;
-} */
 
 hr{
-  background-color: #444444;
-  opacity: 10;
+  border: 1px solid;
+  background-color:  var(--color-lightblue2);
+  border-color:  var(--color-lightblue2);
+  border-radius: 1vw;
+  opacity: 20;
 }
 
 .g-recaptcha{
     margin-top: 1vw;
 }
-/* .rc-anchor-normal{
-  width: 4vw;
-} */
 
-/*-----MEDIA QUERYS-----*/
+.rc-anchor-normal{
+  max-width: 400px;
+}
+
+/*----------MEDIA QUERYS----------*/
 
 @media screen and (max-width: 410px) {
+  .pic{
+    background: url(../assets/img/index-background-mobile.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 110vh;
+}
     .send-button {
     width: 99%;
     }
@@ -686,8 +717,7 @@ hr{
 footer{
   margin: auto;
   padding: 2vw;
-  /* background-color: rgb(255, 255, 255); */
-  background-color: #23272a;
+  background-color: rgb(255, 255, 255);
   margin-bottom: 0px;
 }
 
