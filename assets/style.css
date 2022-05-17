@@ -676,6 +676,9 @@ hr{
       font-size: 1.5vh;
       width:70vw;
     }
+    p a svg {
+      width: 55px;
+    }
 }
 
 @media screen and (min-width: 650px) and (max-width:1000px){
