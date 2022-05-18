@@ -612,31 +612,30 @@ hr{
 /*----------MEDIA QUERYS----------*/
 
 @media screen and (max-width: 410px) {
-  .pic{
-    background: url(../assets/img/index-background-mobile.png) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 110vh;
-}
     .send-button {
     width: 99%;
-    }
-
-    .contact-img{
-      width: 100%;
-      position: absolute;
-      background-size: cover !important;
-      top: 13vh;
-      bottom: 0;
-      right: 0;
     }
 }
 
 @media screen and (max-width: 600px){
     .nav-item a{
         font-size: 5vw;
+    }
+    .pic{
+      background: url(../assets/img/index-background-mobile.png) ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 110vh;
+  }
+    .home .home-text h1{
+      font-size: 11.5vw;
+      line-height: 7vh;
+    }
+    .home .home-text p span{
+      font-size: 11.5vw;
+      line-height: 7vh;
     }
     .direct-contact-container, .form-wrapper {
         float: none;
@@ -663,6 +662,14 @@ hr{
       bottom: 0;
       right: 0;
     }
+    /* .contact-img{
+      width: 100%;
+      position: absolute;
+      background-size: cover !important;
+      top: 13vh;
+      bottom: 0;
+      right: 0;
+    } */
     .text-contact{
       width: 90vw;
       height: 32vh;
@@ -679,6 +686,16 @@ hr{
     p a svg {
       width: 55px;
     }
+    .container-cont{
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+    }
+    .form-horizontal{
+      margin-left: 5%;
+    }
+    .form-control, textarea {
+      max-width: 300px;
+      }
 }
 
 @media screen and (min-width: 650px) and (max-width:1000px){
