@@ -241,8 +241,10 @@ span .animate-span{
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    background-color: #4a7fc1;
+    background:linear-gradient(rgba(0,0,0,0.5) #0071bb);
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
     top: 0;
     border: none;
     border: #181818;
@@ -252,7 +254,7 @@ span .animate-span{
 
 .card:hover {
     top: -2px;
-    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.582);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.344);
 }
 
 .card .thumb {
@@ -263,11 +265,11 @@ span .animate-span{
 
 .main-title-card{
     font-family: var(--font-family-text);
-    font-size: 3vw !important;
+    font-size: 5vw !important;
     background-color: transparent;
     margin: 0;
     color: white;
-    line-height: 3vw;
+    line-height: 4.5vw;
     margin-top: -9vw;
     margin-left: 3vw;
 }
@@ -761,11 +763,6 @@ hr{
     }  
     
 }
-
-
-
-
-
 
 /* Begin Media Queries*/
 @media screen and (max-width: 850px) {
