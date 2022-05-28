@@ -241,7 +241,6 @@ span .animate-span{
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    background:linear-gradient(rgba(0,0,0,0.5) #0071bb);
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -315,6 +314,50 @@ span .animate-span{
     }
 }
 
+/*-----ABOUT-----*/
+
+.about{
+  display: flex;
+  flex-direction: row;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.main-about-us{
+  margin-bottom: 10vh;
+}
+.main-about-us img{
+  position: absolute;
+  width: 50vw;
+  height: 65vh;
+  left: 5vw;
+  top: 175px;
+}
+.main-about-us h1{
+  font-family: var(--font-family-text);
+  font-size: 9vw;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5vh;
+}
+.about-us_texts{
+  margin-top: 100vh;
+  font-family: var(--font-family-text);
+  font-size: 1.1vw;
+}
+.first-text{
+width: 35VW;
+}
+.second-text{
+  width: 35VW;
+  margin-left: 60vw;
+  margin-top: -20vh;
+  }
+  .third-text{
+    width: 35VW;
+    }
 /*-----CONTACT-----*/
 
 #contact {
