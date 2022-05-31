@@ -10,6 +10,29 @@ html, body {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+::-webkit-scrollbar {
+  background: rgba(255, 255, 255, 0);
+  width: 1.2em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 252, 0);
+  border-radius: 100vw;
+  margin-block: .5em;
+  margin-top: 1vh;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-lightblue);
+  border: 0.25em solid white;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-lightblue);
+}
+
 /*-----VARIABLES-----*/
 
 :root {
@@ -214,9 +237,9 @@ span .animate-span{
 
 /*-----SERVICES-----*/
 
-.background-grid{
+/* .background-grid{
     background-color: #4a80c11f;
-}
+} */
 
 .band {
     width: 90%;
@@ -317,8 +340,7 @@ span .animate-span{
 /*-----ABOUT-----*/
 
 .about{
-  display: flex;
-  flex-direction: row;
+  display: grid;
   padding-left: 5vw;
   padding-right: 5vw;
 }
@@ -327,6 +349,7 @@ span .animate-span{
 }
 .main-about-us img{
   position: absolute;
+  background-size: cover;
   width: 50vw;
   height: 65vh;
   left: 5vw;
@@ -339,25 +362,53 @@ span .animate-span{
   top: 50%;
   left: 60%;
   transform: translate(-50%, -50%);
-  text-decoration: underline;
-  text-decoration-thickness: 0.5vh;
+  /* text-decoration: underline;
+  text-decoration-thickness: 0.5vh; */
 }
 .about-us_texts{
-  margin-top: 100vh;
+  display: grid;
+  gap: 7rem;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(3,1fr);
+  margin-top: 85vh;
   font-family: var(--font-family-text);
   font-size: 1.1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 .first-text{
 width: 35VW;
+grid-column-start: 1;
+grid-column-end: 2;
 }
 .second-text{
   width: 35VW;
-  margin-left: 60vw;
-  margin-top: -20vh;
+  grid-row-start: 3;
   }
-  .third-text{
-    width: 35VW;
-    }
+.third-text{
+  width: 35VW;
+  grid-column-start: 2;
+}
+.svg-1{
+  position: absolute;
+  margin-right:0;
+  margin-left: 57vw;
+  margin-top: 15vw;
+  float: left;
+}
+
+.hr2{
+  border: 3px solid;
+  width: 30vw;
+  margin-left: 3vw;
+  margin-right: 2vw;
+  margin-top: -0.1vw;
+  background-color: black;
+  border-color: black;
+  border-radius: 1vw;
+  opacity: 50;
+}
+
 /*-----CONTACT-----*/
 
 #contact {
@@ -882,12 +933,12 @@ hr{
 footer{
   margin: auto;
   padding: 2vw;
-  background-color: rgb(255, 255, 255);
+  background-color: #181818;
   margin-bottom: 0px;
 }
 
 footer p{
-  color: var(--color-black2);
+  color: white;
   text-align: center;
   margin: auto;
   width: 50%;
