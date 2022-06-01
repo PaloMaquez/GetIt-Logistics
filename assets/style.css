@@ -11,7 +11,7 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.675);
   width: 1.2em;
   height: 1em;
 }
@@ -19,7 +19,7 @@ html, body {
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 252, 0);
   border-radius: 100vw;
-  margin-block: .5em;
+  margin-block: 0.5em;
   margin-top: 1vh;
 }
 
@@ -77,6 +77,7 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 100;
+    margin-top: -4vh;
 }
 
 #preloader-3{ /*contact*/
@@ -86,6 +87,7 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 100;
+    margin-top: -4vh;
 }
 
 #preloader-4{ /*wiped*/
@@ -95,6 +97,7 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 100;
+    margin-top: -4vh;
 }
 
 #preloader-5{ /*warehoused*/
@@ -104,6 +107,7 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 100;
+    margin-top: -4vh;
 }
 
 /*-----NAVBAR-----*/
@@ -341,11 +345,11 @@ span .animate-span{
 
 .about{
   display: grid;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  /* padding-left: 3vw;
+  padding-right: 3vw; */
 }
 .main-about-us{
-  margin-bottom: 10vh;
+  margin-bottom: 1vh;
 }
 .main-about-us img{
   position: absolute;
@@ -367,14 +371,16 @@ span .animate-span{
 }
 .about-us_texts{
   display: grid;
-  gap: 7rem;
+  gap: 5rem;
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: repeat(3,1fr);
   margin-top: 85vh;
+  margin-bottom: 5vh;
   font-family: var(--font-family-text);
   font-size: 1.1vw;
   padding-left: 5vw;
-  padding-right: 5vw;
+  padding-right: 3vw;
+  text-align: justify;
 }
 .first-text{
 width: 35VW;
@@ -390,11 +396,22 @@ grid-column-end: 2;
   grid-column-start: 2;
 }
 .svg-1{
+  max-width:20%;
+  max-height:50%;
   position: absolute;
-  margin-right:0;
-  margin-left: 57vw;
-  margin-top: 15vw;
-  float: left;
+  display:block;
+  /* transform: translateY(90%); */
+  margin-left: 74.2vw;
+  margin-top: 45vh;
+}
+
+.svg-2{
+  max-width:20%;
+  max-height:50%;
+  position: absolute;
+  display:block;
+  transform: translateY(90%);
+  margin-top: 23%;
 }
 
 .hr2{
@@ -942,6 +959,20 @@ footer p{
   text-align: center;
   margin: auto;
   width: 50%;
+}
+
+.footer{
+  margin: auto;
+  padding: 2vw;
+  margin-top: 3vw;
+  background-color: #181818;
+  margin-bottom: 0px;
+}
+
+.footer-p{
+  color: white;
+  text-align: center;
+  margin: auto;
 }
 
 /* 
