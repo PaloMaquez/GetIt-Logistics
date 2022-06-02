@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
     <link rel="preload" as="image" href="" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,33 +60,37 @@
     </header>
     <main class="about">
         <div class="main-about-us">
-            <img src="../assets/img/about-us.jpg" alt="">
+            <img src="../assets/img/about-us.jpg" alt="About us main img">
             <h1>About Us <hr class="hr2"> </h1>
-            <img src="../assets/img/orn-3 1.svg" class="svg-1" alt=""> 
+            <img src="../assets/img/orn-3 1.svg" class="svg-1" alt="svg"> 
         </div>
         <section class="about-us_texts">
-            <p class="first-text">
+            <p class="first-text" data-aos="fade-right">
                 <span class="about-span">Get It Logistics</span> is a family owned company, based out of North Texas funded in 2022 with the idea and purpose to <b> help customers reach their goals</b> by providing a top of the line logistics and IT suite of services.
             </p>
             <br>
-            <p class="third-text">
+            <p class="third-text" data-aos="fade-left">
                 We help your business grow by bringing to the table services such as <b> computer bank life cycle, repairs and erasing data, we also offer warehousing,  distribution and kitting. </b>
             </p>
-            <p class="second-text">
+            <p class="second-text" data-aos="fade-right">
                 <span class="about-span">Get It Logistics</span> has the expertise to tailor the right solution for your needs. Whether you are a small business or a large company,<b> we are here for you</b>. Call or email us today and let us help with  your next 3PL project.
             </p>
         </section>
-        <img src="../assets/img/orn-1.svg"  class="svg-2" alt="">
+        <img src="../assets/img/orn-1.svg"  class="svg-2" alt="svg">
     </main>
     <footer>
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
         var loader = document.getElementById('preloader');
         window.addEventListener('load' , function(){
             loader.style.display = "none";
         })
+        </script>
+        <script>
+            AOS.init();
         </script>
 </body>
 </html>
