@@ -816,6 +816,9 @@ hr{
       max-width: 300px;
       }
       /*about*/
+      .main-about-us{
+        margin-bottom: -5vh;
+      }
       .main-about-us img{
         width: 93.5vw;
         height: 45vh;
@@ -862,7 +865,7 @@ hr{
       .svg-1{
         max-width:30%;
         max-height:60%;
-        transform: translateY(110%) translateX(200%);
+        transform: translateY(105%) translateX(200%);
         z-index: 1;
       }
       .svg-2{
@@ -875,6 +878,11 @@ hr{
       ::-webkit-scrollbar{
         display: none;
       }
+      /*FOOTER*/
+      footer p{
+        font-size: 3vw;
+      }
+      
 }
 
 @media screen and (min-width: 650px) and (max-width:1000px){
