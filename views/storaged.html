@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
     <link rel="preload" as="image" href="" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,24 +59,73 @@
             </nav>
     </header>
     <main>
-        <div class="outer-wrapper">
-            <div class="wrapper">
-                <div class="slide one"></div>
-                <div class="slide two"></div>
-                <div class="slide three"></div>
-                <div class="slide four"></div>
+        <div class="main-container-service">
+            <div class="main-img-service">
             </div>
         </div>
+        <div class="main-title-service">
+            <h1>
+                <span class="span-service">Get IT</span> <br> Warehoused
+            </h1>
+        </div>
+        <div class="paragraphs">
+            <article class="info-services" >
+                <p data-aos="fade-up" data-aos-duration="2000">
+                    With an ever growing demand and chip shortages not going away anytime soon, we share the idea of being ready by stocking up beforehand then GET IT out the door when needed. 
+                </p>
+            </article>
+            <article class="info-services-2">
+                <p data-aos="fade-up" data-aos-duration="2000">
+                    Stop using your premium real estate office space as a shelter for boxes and let us take them off your hands. We provide the opportunity to warehouse your assets with us.  Take advantage of this service and claim your office space back!
+                </p>
+            </article>
+        </div>
+            <button class="order"><span class="default">Send IT</span><span class="success">Sent
+                <svg viewbox="0 0 12 10">
+                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </svg></span>
+            <div class="box"></div>
+            <div class="truck">
+                <div class="back"></div>
+                <div class="front">
+                <div class="window"></div>
+                </div>
+                <div class="light top"></div>
+                <div class="light bottom"></div>
+            </div>
+            <div class="lines"></div>
+            </button>
     </main>
+    <br><br><br><br><br>
     <footer>
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
+            <!-- partial -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var loader = document.getElementById('preloader-5');
         window.addEventListener('load' , function(){
             loader.style.display = "none";
         })
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $('.order').click(function(e) {
+
+let button = $(this);
+
+if(!button.hasClass('animate')) {
+    button.addClass('animate');
+    setTimeout(() => {
+        button.removeClass('animate');
+    }, 10000);
+}
+
+});
     </script>
 </body>
 </html>
