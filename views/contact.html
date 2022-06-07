@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="preload" as="image" href="" />
     <!--reCAPTCHA-->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi"></script>
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,7 +106,7 @@
 
                     <div class="g-recaptcha" data-sitekey="6LckFwAfAAAAAJpi_PR38ja0B3yUPybGbv024smX"></div>
                 
-                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                <button class="btn btn-primary send-button" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit' id="submit" type="submit" value="SEND">
                     <div class="alt-send-button">
                     <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
                     </div>
@@ -129,6 +129,7 @@
                 </div>
             </div>
         </section>
+        <input type="hidden" name="token_generate" id="token_generate">
     </main>
     <footer class="footer">
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
@@ -169,5 +170,18 @@
         }
         });
     </script>
+    <!--reCAPTCHA-->
+   <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'submit'}).then(function(token) {
+            // Add your logic to submit to your backend server here.
+            var response = document.getElementById('token_generate');
+            response.value = token;
+        });
+      });
+    }
+</script>
 </body>
 </html>  

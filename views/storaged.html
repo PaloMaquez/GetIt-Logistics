@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,900&family=Hind+Madurai:wght@300;400;500;700&family=Montserrat:ital,wght@0,100;0,400;1,100;1,300;1,800;1,900&display=swap" rel="stylesheet">
     <!--FOOTER ICONS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--reCAPTCHA-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi"></script>
     <!--SEO-->
     <meta name="description" content="Sumérgete en el apasionado mundo de Marcia DM, donde vivirás historias llenas de aventuras, giros inesperados y romance intenso. Puedes encontrar libros con temáticas desde romance contemporáneo, hasta romance paranormal.">
     <meta name="keywords" content="libros de romance, libros, romance, amantes, enemigos, de enemigos a amantes, romance bully,  reseñas, erotico, lectura, contacto, amor, libro paranormal, rivales en dallas, amor y odio en manhattan, resiliencia, rage, carter, contemporaneo, romance intenso, aventuras, bestseller, kindle, kindleunlimited, contemporaneo, friends to lovers, amigos a amantes, silver wolf">
@@ -99,7 +101,7 @@
                 <input type="text" name="email" class="form-control" placeholder="E-mail" required>
                 <textarea name="message" id="" class="form-control" cols="50" rows="2" placeholder="Message" required></textarea>
                 <!--BUTTON-->
-                <button class="order"><span class="default">Send IT</span><span class="success">Sent
+                <button class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit'><span class="default">Send IT</span><span class="success">Sent
                     <svg viewbox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                     </svg></span>
@@ -115,13 +117,14 @@
                 <div class="lines"></div>
                 </button>
             </form>
+            <input type="hidden" name="token_generate" id="token_generate">
         </div>
     </main>
     <footer>
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
-            <!-- partial -->
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -147,5 +150,18 @@ if(!button.hasClass('animate')) {
 
 });
     </script>
+    <!--reCAPTCHA-->
+   <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'submit'}).then(function(token) {
+            // Add your logic to submit to your backend server here.
+            var response = document.getElementById('token_generate');
+            response.value = token;
+        });
+      });
+    }
+</script>
 </body>
 </html>
