@@ -62,7 +62,7 @@ html, body {
 
 #preloader{ /*index*/
     background:white url(../assets/img/preloaders/preloader.gif) no-repeat center center;
-    background-size: 10%;
+    background-size: 15%;
     height: 105vh;
     width: 100%;
     position: fixed;
@@ -72,8 +72,8 @@ html, body {
 
 #preloader-2{ /*kitted*/
     background:white url(../assets/img/preloaders/kitted.gif) no-repeat center center;
-    background-size: 10%;
-    height: 100%;
+    background-size: 15%;
+    height: 105vh;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -83,7 +83,7 @@ html, body {
 #preloader-3{ /*contact*/
     background:white url(../assets/img/preloaders/contact-preloader.gif) no-repeat center center;
     background-size: 10%;
-    height: 100%;
+    height: 105vh;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -93,7 +93,7 @@ html, body {
 #preloader-4{ /*wiped*/
     background:white url(../assets/img/preloaders/wiped-preloader.gif) no-repeat center center;
     background-size: 10%;
-    height: 100%;
+    height: 105vh;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -103,7 +103,7 @@ html, body {
 #preloader-5{ /*warehoused*/
     background:white url(../assets/img/preloaders/warehoused-preloader.gif) no-repeat center center;
     background-size: 10%;
-    height: 100%;
+    height: 105vh;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -453,12 +453,14 @@ span .animate-span{
 
 .contact-service{
   font-family: var(--font-family-subtitle);
-  font-size: 1.7vw;
+  font-size: 2vw;
   text-align: center;
 }
 .contact-form_service{
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 5vh auto;
 }
 .div-rush{
