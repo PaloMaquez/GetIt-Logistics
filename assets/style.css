@@ -364,6 +364,17 @@ span .animate-span{
   align-items: center;
   align-self: center;
 }
+.main-img-service2{
+  background-image: url('https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  width: 80%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
 .main-title-service h1{
   z-index: 100;
   color: white;
@@ -391,13 +402,15 @@ span .animate-span{
 }
 .icon-text{
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 15vw;
   height: 20vh;
   background-color: rgba(0, 113, 187, 0.21);
   border-radius: 35px;
-  margin-left: 65vw;
-  margin-bottom: 10vh;
-  margin-top: 10vh;
+  margin-left: 60vw;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   
 }
 .icon-service{
@@ -405,23 +418,20 @@ span .animate-span{
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: -5vh;
+  margin-right: -5vw;
 }
-/* .icon-service1{
-  margin-left: 1vw;
-}
-.icon-service2{
-  margin-left: 5vw;
-} */
 .icon-hr{
   display: flex;
-  justify-content: center;
-  width: 12vw;
+  justify-content:start;
+  position: absolute;
+  width: 15vw;
+  margin-right: -7vw;
   border: 2px solid;
   background-color:  #191919;
   border-color:   #191919;
   border-radius: 1vw;
   opacity: 20;
-  margin-top: 10vh;
 }
 .divition-hr{
   display: flex;
@@ -451,6 +461,37 @@ span .animate-span{
   justify-content: center;
   margin: 5vh auto;
 }
+.div-rush{
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(2,1fr);
+}
+.rush-title{
+  font-family: var(--font-family-subtitle);
+  font-size: 2vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+  font-weight: bolder;
+}
+.info-services-rush{
+  display: flex;
+  font-weight: bolder;
+  margin-left: 10vw;
+  width: 40vw;
+  text-align: justify;
+  font-size: 1.3vw;
+  font-family: var(--font-family-text);
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.rush-icon{
+  margin-left: 20vw;
+  margin-top: -7vh;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
 /*-----BUTTON-----*/
 
 .order {

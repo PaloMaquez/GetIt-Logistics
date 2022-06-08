@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
     <link rel="preload" as="image" href="" />
+    <!--LINK EFFECTS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,900&family=Hind+Madurai:wght@300;400;500;700&family=Montserrat:ital,wght@0,100;0,400;1,100;1,300;1,800;1,900&display=swap" rel="stylesheet">
     <!--FOOTER ICONS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--reCAPTCHA-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi"></script>
     <!--SEO-->
     <meta name="description" content="Sumérgete en el apasionado mundo de Marcia DM, donde vivirás historias llenas de aventuras, giros inesperados y romance intenso. Puedes encontrar libros con temáticas desde romance contemporáneo, hasta romance paranormal.">
     <meta name="keywords" content="libros de romance, libros, romance, amantes, enemigos, de enemigos a amantes, romance bully,  reseñas, erotico, lectura, contacto, amor, libro paranormal, rivales en dallas, amor y odio en manhattan, resiliencia, rage, carter, contemporaneo, romance intenso, aventuras, bestseller, kindle, kindleunlimited, contemporaneo, friends to lovers, amigos a amantes, silver wolf">
@@ -58,16 +62,117 @@
             </nav>
     </header>
     <main>
+        <div class="main-container-service">
+            <div class="main-img-service2">
+            </div>
+        </div>
+        <div class="main-title-service">
+            <h1>
+                <span class="span-service">Get IT</span> <br> Delivered
+            </h1>
+        </div>
+        <div class="paragraphs">
+            <article class="info-services" >
+                <p data-aos="fade-up" data-aos-duration="1000">
+                    With an ever growing demand and chip shortages not going away anytime soon, we share the idea of being ready by stocking up beforehand then GET IT out the door when needed. 
+                </p>
+            </article>
+            <div class="icon-text">
+                <div class="icon-service">
+                    <img src="../assets/img/png/012-express-delivery.png" class="icon-service2" width="45%" alt="warehouse icon">
+                    <img src="../assets/img/png/005-truck.png" class="icon-service1" width="40%" alt="warehouse icon">
+                    <img src="../assets/img/png/020-delivery-man.png" class="icon-service0" width="40%" alt="warehouse icon">
+                </div>
+                <hr class="icon-hr">
+            </div>
+            <article class="info-services">
+                <p data-aos="fade-up" data-aos-duration="1000">
+                    Stop using your premium real estate office space as a shelter for boxes and let us take them off your hands. We provide the opportunity to warehouse your assets with us.  Take advantage of this service and claim your office space back!
+                </p>
+            </article>
+        </div>
+        <hr class="divition-hr">
+        <h2 class="adicional-title">Additional Services</h2>
+        <div class="div-rush">
+            <h2 class="rush-title" data-aos="fade-up" data-aos-duration="1000">Rush Orders</h2>
+            <article class="info-services-rush">
+                <p data-aos="fade-up" data-aos-duration="1000">
+                    Deadlines. We all have them. But with us you don't have to dread them anymore. Whenever you are facing a tight delivery date or just want to impress someone, all the services we provide to you have the option of being serviced overnight to get your package there the next business day. Just let us know and we’ll rush it for you.
+                </p>
+            </article>
+            <img src="../assets/img/preloaders/rush.gif" data-aos="fade-left" data-aos-duration="1000" class="rush-icon" width="35%" alt="24 hour delivery gif">
+        </div>
+        <div>
+        </div>
+        <hr class="divition-hr">
+        <h3 class="contact-service">Let's Get In Touch</h3>
+        <div class="contact-form_service">
+            <form id="contact-form_service" method="POST" action="">
+                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                <input type="text" name="email" class="form-control" placeholder="E-mail" required>
+                <textarea name="message" id="" class="form-control" cols="50" rows="2" placeholder="Message" required></textarea>
+                <!--BUTTON-->
+                <button class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit'><span class="default">Send IT</span><span class="success">Sent
+                    <svg viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                    </svg></span>
+                <div class="box"></div>
+                <div class="truck">
+                    <div class="back"></div>
+                    <div class="front">
+                    <div class="window"></div>
+                    </div>
+                    <div class="light top"></div>
+                    <div class="light bottom"></div>
+                </div>
+                <div class="lines"></div>
+                </button>
+            </form>
+            <input type="hidden" name="token_generate" id="token_generate">
+        </div>
     </main>
     <footer>
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var loader = document.getElementById('preloader');
         window.addEventListener('load' , function(){
             loader.style.display = "none";
         })
         </script>
+           <script>
+            AOS.init();
+        </script>
+        <script>
+            $('.order').click(function(e) {
+    
+    let button = $(this);
+    
+    if(!button.hasClass('animate')) {
+        button.addClass('animate');
+        setTimeout(() => {
+            button.removeClass('animate');
+        }, 10000);
+    }
+    
+    });
+        </script>
+        <!--reCAPTCHA-->
+       <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'submit'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+                var response = document.getElementById('token_generate');
+                response.value = token;
+            });
+          });
+        }
+    </script>
 </body>
 </html>
