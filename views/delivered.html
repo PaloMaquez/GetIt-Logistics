@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
     <link rel="preload" as="image" href="" />
-    <!--LINK EFFECTS-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,900&family=Hind+Madurai:wght@300;400;500;700&family=Montserrat:ital,wght@0,100;0,400;1,100;1,300;1,800;1,900&display=swap" rel="stylesheet">
     <!--FOOTER ICONS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--LINK AOS EFFECTS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--contact ICONS-->
+    <script src="https://kit.fontawesome.com/dc0fdf8d55.js" crossorigin="anonymous"></script>
     <!--reCAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js?render=6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi"></script>
     <!--SEO-->
@@ -92,26 +94,38 @@
         </div>
         <hr class="divition-hr">
         <h2 class="adicional-title">Additional Services</h2>
-        <div class="div-rush">
-            <h2 class="rush-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Rush Orders</h2>
-            <article class="info-services-rush">
-                <p data-aos="fade-up" data-aos-duration="1000"data-aos-once="true">
-                    Deadlines. We all have them. But with us you don't have to dread them anymore. Whenever you are facing a tight delivery date or just want to impress someone, all the services we provide to you have the option of being serviced overnight to get your package there the next business day. Just let us know and we’ll rush it for you.
-                </p>
-            </article>
-            <img src="../assets/img/preloaders/rush.gif" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000" class="rush-icon" width="35%" alt="24 hour delivery gif">
-        </div>
+            <div class="div-rush">
+                <h2 class="rush-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Rush Orders</h2>
+                <article class="info-services-rush">
+                    <p data-aos="fade-up" data-aos-duration="1000"data-aos-once="true">
+                        Deadlines. We all have them. But with us you don't have to dread them anymore. Whenever you are facing a tight delivery date or just want to impress someone, all the services we provide to you have the option of being serviced overnight to get your package there the next business day. Just let us know and we’ll rush it for you.
+                    </p>
+                </article>
+                <img src="../assets/img/preloaders/rush.gif" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000" class="rush-icon" width="35%" alt="24 hour delivery gif">
+            </div>
+            <div class="div-track">
+                <h2 class="track-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Tracking</h2>
+                <article class="info-services-track">
+                    <p data-aos="fade-up" data-aos-duration="1000"data-aos-once="true">
+                        The Get It Logistics tracking system uses the advanced equipment for 24/7 monitoring of all goods and vehicles. The customer can check the shipping status and location at any time with the tracking number we provide. Our System allows for freight booking and delivery tracking, as well as for the order status monitoring.
+                    </p>
+                </article>
+                <img src="../assets/img/preloaders/animation_300_l45yk2r8.gif" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000" class="track-icon" width="30%" alt="24 hour delivery gif">
+            </div>
         <div>
         </div>
         <hr class="divition-hr">
         <h3 class="contact-service">Let's Get In Touch</h3>
         <div class="contact-form_service">
             <form id="contact-form_service" method="POST" action="">
-                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                <input type="text" name="email" class="form-control" placeholder="E-mail" required>
-                <textarea name="message" id="" class="form-control" cols="50" rows="2" placeholder="Message" required></textarea>
+                <span id="name-error"></span>
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required id="contact-name" onkeyup="validateName()">
+                <span id="email-error"></span>
+                <input type="text" name="email" class="form-control" placeholder="E-mail" required id="contact-email" onkeyup="validateEmail()">
+                <span id="message-error"></span>
+                <textarea name="message" id="contact-message" class="form-control" cols="50" rows="2" placeholder="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
                 <!--BUTTON-->
-                <button class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit'><span class="default">Send IT</span><span class="success">Sent
+                <button class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit'><span class="default">Send IT</span><span class="success">Sent!
                     <svg viewbox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                     </svg></span>
@@ -133,6 +147,7 @@
     <footer>
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
+    <script src="../assets/main.js"></script>
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -143,7 +158,7 @@
             loader.style.display = "none";
         })
         </script>
-           <script>
+        <script>
             AOS.init();
         </script>
         <script>
@@ -172,6 +187,60 @@
             });
           });
         }
+    </script>
+    <script>
+        var nameError = document.getElementById('name-error');
+        var emailError = document.getElementById('email-error');
+        var messageError = document.getElementById('message-error');
+
+        function validateName(){
+        var name = document.getElementById('contact-name').value;
+
+        if(name.lenght == 0){
+            nameError.innerHTML = 'Full name is required'
+            return false;
+        }
+        if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+            nameError.innerHTML = 'Full name is required'
+            return false;
+        }
+        nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        return true;
+        }
+
+        function validateEmail(){
+            var email = document.getElementById('contact-email').value;
+
+            if(email.lenght == 0){
+                emailError.innerHTML = 'Email is required'
+                return false;
+            }
+            if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+                emailError.innerHTML = 'Invalid Email'
+                return false;
+            }
+            emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+            return true;
+        }
+
+        function validateMessage(){
+            var message = document.getElementById('contact-message').value;
+            var required = 30;
+            var left = required - message.lenght;
+
+            if(message.lenght == 0){
+                emailError.innerHTML = 'Email is required'
+                return false;
+            }
+
+            if (left > 0) {
+                messageError.innerHTML = left + 'More characters are required';
+                return false;
+            }
+            messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+            return true;
+        }
+
     </script>
 </body>
 </html>
