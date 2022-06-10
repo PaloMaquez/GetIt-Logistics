@@ -141,11 +141,12 @@ html, body {
 
 .pic{
     background: url(../assets/img/prueba2.png) ;
+    background-color: #191919;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 110vh;
+    height: 95vh;
 }
 
 .container{
@@ -155,7 +156,7 @@ html, body {
 }
 
 .home{
-  height: 90vh;
+  height: 89vh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1407,6 +1408,7 @@ hr{
 /*-----FOOTER-----*/
 
 footer{
+  display: flex;
   margin: auto;
   padding: 2vw;
   background-color: #181818;
@@ -1422,7 +1424,7 @@ footer p{
 
 .footer{
   margin: auto;
-  padding: 2vw;
+  padding: 2.5vw;
   margin-top: 3vw;
   background-color: #181818;
   margin-bottom: 0px;
