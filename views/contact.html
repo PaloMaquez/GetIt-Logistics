@@ -61,7 +61,7 @@
                 </div>
             </nav>
     </header>
-    <main>
+    <main class="main-contact-cont">
         <div class="small-12 medium-9 large-7 columns nopad main-contact">
             <div class="text-contact">
                 <div class="text-container">
@@ -89,20 +89,25 @@
             <!-- Left contact page --> 
 
                 <form id="contact-form" class="form-horizontal" role="form">
-                    <h2 class="contact-title">Let's Get in Touch</h2>
                 <div class="form-group">
                     <div class="col-sm-12">
-                    <input type="text" class="form-control js-input" id="name" placeholder="NAME" name="name" value="" required>
+                    <input type="text" class="form-control js-input" id="name" placeholder="Name" name="name" value="" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                    <input type="email" class="form-control js-input" id="email" placeholder="EMAIL" name="email" value="" required>
+                    <input type="email" class="form-control js-input" id="email" placeholder="Email" name="email" value="" required>
                     </div>
                 </div>
 
-                <textarea class="form-control js-input" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                    <input type="text" class="form-control js-input" id="subject" placeholder="Subject" name="subject" value="" required>
+                    </div>
+                </div>
+
+                <textarea class="form-control js-input" rows="3" placeholder="Message" name="message" required id="textarea-bottom"></textarea>
 
                     <div class="g-recaptcha" data-sitekey="6LckFwAfAAAAAJpi_PR38ja0B3yUPybGbv024smX"></div>
                 
