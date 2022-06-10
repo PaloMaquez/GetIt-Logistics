@@ -1190,6 +1190,18 @@ p a:hover {
 }
 
 /* Left contact page */
+
+.contact-title{
+  font-family: var(--font-family-subtitle);
+  font-size: 2vw;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
 .form-horizontal {
   /*float: left;*/
   max-width: 400px;
@@ -1212,7 +1224,7 @@ textarea {
   height: 34px;
   width: 400px;
   overflow: hidden;
-  transition: all .2s ease-in-out;
+  transition: all .5s ease-in-out;
   margin-bottom: 7vw;
 }
 
@@ -1241,7 +1253,8 @@ textarea {
 
 /* Begin Right Contact Page */
 .direct-contact-container {
-  max-width: 400px;
+  max-width:400px;
+  margin-top: 25vh;
 }
 
 /* Location, Phone, Email Section */
@@ -1382,7 +1395,7 @@ hr{
 
 @media screen and (max-width: 410px) {
     .send-button {
-    width: 99%;
+    width: 70vw;
     }
 }
 
@@ -1471,6 +1484,9 @@ hr{
     .form-control, textarea {
       max-width: 300px;
       }
+      .send-button {
+        width: 300px;
+        }
       /*about*/
       .main-about-us{
         margin-bottom: -5vh;
@@ -1718,12 +1734,6 @@ hr{
     line-height: 55px;
   }
   
-}
-
-@media screen and (max-width: 410px) {
-  .send-button {
-    width: 99%;
-  }
 }
 
 
