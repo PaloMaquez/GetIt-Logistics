@@ -27,6 +27,7 @@
     <title>Services | Get IT Logistics</title>
 </head>
 <body class="background-grid">
+  <div id="preloader"></div>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <div class="container-fluid d-lg-flex">
@@ -135,5 +136,11 @@
     <script>
       AOS.init();
     </script>
+    <script>
+      var loader = document.getElementById('preloader');
+      window.addEventListener('load' , function(){
+          loader.style.display = "none";
+      })
+      </script>
 </body>
 </html>

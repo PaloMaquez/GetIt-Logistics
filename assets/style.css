@@ -1458,6 +1458,23 @@ footer p{
     ::-webkit-scrollbar{
       display: none;
     }
+    /*PRELOADERS*/
+    #preloader{ /*index*/
+      background-size: 50%;
+  }
+  #preloader-2{ /*kitted*/
+      background-size: 40%;
+  }
+  #preloader-3{ /*contact*/
+      background-size: 25%;
+  }
+  #preloader-4{ /*wiped*/
+      background-size: 35%;
+  }
+  #preloader-5{ /*warehoused*/
+      background-size: 30%;
+  }
+    /*LOGO*/
     .logo{
       width: 40vw;
     }

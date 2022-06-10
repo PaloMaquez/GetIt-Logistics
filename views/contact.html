@@ -91,23 +91,23 @@
                 <form id="contact-form" class="form-horizontal" role="form">
                 <div class="form-group">
                     <div class="col-sm-12">
-                    <input type="text" class="form-control js-input" id="name" placeholder="Name" name="name" value="" required>
+                    <input type="text" class="form-control js-input" id="name" placeholder="Name" name="name" value="" required id="contact-name" onkeyup="validateName()">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                    <input type="email" class="form-control js-input" id="email" placeholder="Email" name="email" value="" required>
+                    <input type="email" class="form-control js-input" id="email" placeholder="Email" name="email" value="" required id="contact-email" onkeyup="validateEmail()">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                    <input type="text" class="form-control js-input" id="subject" placeholder="Subject" name="subject" value="" required>
+                    <input type="text" class="form-control js-input" id="subject" placeholder="Subject" name="subject" value="" required  id="contact-subject" onkeyup="validateSubject()">
                     </div>
                 </div>
 
-                <textarea class="form-control js-input" rows="3" placeholder="Message" name="message" required id="textarea-bottom"></textarea>
+                <textarea class="form-control js-input" rows="3" placeholder="Message" name="message" required id="textarea-bottom" id="contact-message" onkeyup="validateMessage()"></textarea>
 
                     <div class="g-recaptcha" data-sitekey="6LckFwAfAAAAAJpi_PR38ja0B3yUPybGbv024smX"></div>
                 
@@ -201,6 +201,76 @@
 //       }, false);
 
 //   });
+</script>
+<script>
+    var nameError = document.getElementById('name-error');
+    var emailError = document.getElementById('email-error');
+    var messageError = document.getElementById('message-error');
+    var subjectError = document.getElementById('subject-error')
+
+    function validateName(){
+    var name = document.getElementById('contact-name').value;
+
+    if(name.lenght == 0){
+        nameError.innerHTML = 'Full name is required'
+        return false;
+    }
+    if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+        nameError.innerHTML = 'Full name is required'
+        return false;
+    }
+    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
+    }
+
+    function validateEmail(){
+        var email = document.getElementById('contact-email').value;
+
+        if(email.lenght == 0){
+            emailError.innerHTML = 'Email is required'
+            return false;
+        }
+        if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+            emailError.innerHTML = 'Invalid Email'
+            return false;
+        }
+        emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        return true;
+    }
+
+    // function validateSubject(){
+    // var subject = document.getElementById('contact-subject').value;
+
+    // if(subject.lenght == 0){
+    //     subjectError.innerHTML = 'Subject is required'
+    //     return false;
+    // }
+    // if(!subject.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+    //     subjectError.innerHTML = 'Subject is required'
+    //     return false;
+    // }
+    // subjectError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    // return true;
+    // }
+
+    function validateMessage(){
+        var message = document.getElementById('contact-message').value;
+        var required = 30;
+        var left = required - message.lenght;
+
+        if(message.lenght == 0){
+            emailError.innerHTML = 'Email is required'
+            return false;
+        }
+
+        if (left > 0) {
+            messageError.innerHTML = left + 'More characters are required';
+            return false;
+        }
+        messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        return true;
+    }
+
 </script>
 </body>
 </html>  
