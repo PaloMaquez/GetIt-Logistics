@@ -133,6 +133,10 @@ html, body {
     width: 10vw;
 }
 
+/* .navbar-toggler{
+  display: block;
+} */
+
 /*-----INDEX-----*/
 
 .pic{
@@ -519,6 +523,18 @@ span .animate-span{
   color: red;
 }
 #email-error i{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: var(--color-blue);
+}
+#subject-error{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: red;
+}
+#subject-error i{
   display: flex;
   justify-content: end;
   flex-direction:row-reverse;
@@ -1562,7 +1578,136 @@ hr{
       footer p{
         font-size: 3vw;
       }
-      
+
+      /*SERVICES DETAIL (DELIVERED, RETRIEVED, ETC)*/
+      .main-container-service{
+        width: 98%;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        height: 60vh;
+      }
+      .main-img-service{
+        width: 95%;
+        height: 50vh;
+      }
+      .main-img-service2{
+        width: 95%;
+        height: 50vh;
+      }
+      .main-img-service3{
+        width: 95%;
+        height: 50vh;
+      }
+      .main-img-service4{
+        width: 95%;
+        height: 50vh;
+      }
+      .main-img-service5{
+        width: 95%;
+        height: 50vh;
+      }
+      .main-title-service h1{
+        font-size: 15vw;
+        margin-top: -25vh;
+        margin-bottom: 15vh;
+      }
+      .info-services{
+        display: flex;
+        font-family: var(--font-family-text);
+        font-size: 4vw;
+        font-weight: bolder;
+        text-align: justify;
+        width: 80vw;
+        margin-top: 5vh;
+      }
+      .adicional-title{
+        font-size: 7vw;
+        text-align: center;
+      }
+      .adicional-title-span{
+        font-size: 4.5vw;
+      }
+      .div-rush{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
+      }
+      .rush-title{
+        font-family: var(--font-family-subtitle);
+        font-size: 5vw;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        margin-left: 10vw;
+        font-weight: bolder;
+      }
+      .info-services-rush{
+        display: flex;
+        margin-left: 10vw;
+        width: 80vw;
+        text-align: justify;
+        font-size: 3vw;
+        font-family: var(--font-family-text);
+        grid-column-start: 1;
+        grid-row-start: 2;
+      }
+      .rush-icon{
+        display: flex;
+        justify-content: center;
+        display: block;
+        margin: 0px auto;
+        margin-top: 2vh;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+      }
+      .div-track{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 1vh;
+      }
+      .track-title{
+        font-family: var(--font-family-subtitle);
+        font-size: 5vw;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        margin-left: 10vw;
+        font-weight: bolder;
+        grid-column-start: 1;
+      }
+      .info-services-track{
+        display: flex;
+        margin-left: 10vw;
+        width: 80vw;
+        text-align: justify;
+        font-size: 3vw;
+        font-family: var(--font-family-text);
+        grid-column-start: 1;
+        grid-row-start: 2;
+      }
+      .track-icon{
+        display: flex;
+        justify-content: center;
+        display: block;
+        margin: 0px auto;
+        margin-top: 2vh;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+      }
+      .contact-service{
+        font-size: 6vw;
+      }
+      .contact-form_service{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 5vh auto;
+      }
+      input{
+        margin-top: 5vh;
+      }
 }
 
 @media screen and (min-width: 610px) and (max-width:1100px){
