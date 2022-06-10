@@ -356,7 +356,7 @@ span .animate-span{
 .main-img-service{
   background-image: url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172');
   width: 80%;
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -365,9 +365,9 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service2{
-  background-image: url('https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url(../assets/img/pexels-tima-miroshnichenko-6169668\ \(1\).jpg);
   width: 80%;
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -378,7 +378,7 @@ span .animate-span{
 .main-img-service3{
   background-image: url('https://image.shutterstock.com/image-photo/delivery-mail-people-shipping-conceptyoung-600w-772759234.jpg');
   width: 80%;
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -389,7 +389,7 @@ span .animate-span{
 .main-img-service4{
   background-image: url('https://image.shutterstock.com/image-photo/closeup-view-female-online-store-600w-1832128345.jpg');
   width: 80%;
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -400,7 +400,7 @@ span .animate-span{
 .main-img-service5{
   background-image: url('https://image.shutterstock.com/image-photo/female-manager-using-laptop-computer-600w-2044257446.jpg');
   width: 80%;
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -414,24 +414,28 @@ span .animate-span{
   font-size: 7vw;
   margin-top: -38vh;
   margin-left: 5vw;
-  margin-bottom: 18vh;
+  margin-bottom: 15vh;
 }
 .span-service{
   color: var(--color-blue);
   font-weight: bolder;
 }
-/* .paragraphs{
-
-} */
+.paragraphs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blue-letters{
+  color: var(--color-blue);
+}
 .info-services{
   display: flex;
-  justify-content: flex-start;
-  font-weight: bolder;
-  margin-left: 5vw;
-  width: 40vw;
-  text-align: justify;
-  font-size: 1.3vw;
   font-family: var(--font-family-text);
+  font-size: 1.3vw;
+  font-weight: bolder;
+  text-align: justify;
+  width: 40vw;
+  margin-top: 5vh;
 }
 .icon-text{
   display: flex;
@@ -481,7 +485,9 @@ span .animate-span{
   font-size: 3vw;
   text-align: center;
 }
-
+.adicional-title-span{
+  font-size: 1.8vw;
+}
 .contact-service{
   font-family: var(--font-family-subtitle);
   font-size: 2vw;
