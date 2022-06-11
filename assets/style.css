@@ -117,6 +117,7 @@ html, body {
     font-size: 1.2vw;
     letter-spacing: 2.5px;
     margin: 0.8vw;
+    z-index: 1;
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -276,11 +277,10 @@ span .animate-span{
     border: none;
     border: #181818;
     transition: all .1s ease-in;
-    border: #181818;
 }
 
 .card:hover {
-    top: -2px;
+    top: -5px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.344);
 }
 
@@ -296,19 +296,9 @@ span .animate-span{
     background-color: transparent;
     margin: 0;
     color: white;
-    line-height: 4.5vw;
+    line-height: 5vw;
     margin-top: -9vw;
     margin-left: 3vw;
-}
-
-.flex-icons{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-shrink: 1;
-    position: relative;
-    bottom: 3vw;
-    left: 18vw;
 }
 
 @media only screen and (max-width: 500px) {
