@@ -1421,7 +1421,7 @@ footer p{
 }
 
 
-/*----------MEDIA QUERYS----------*/
+/*---------------------------------------------------------MEDIA QUERYS---------------------------------------------------------*/
 
 @media screen and (max-width: 450px) {
     .send-button {
@@ -1463,8 +1463,13 @@ footer p{
       width: 40vw;
     }
     /*navbar*/
+    .navbar-nav{
+      margin-top: 2vh;
+      margin-bottom: 5vh;
+    }
     .nav-item a{
         font-size: 5vw;
+        font-family: var(--font-family-title);
     }
     /*index*/
     .pic{
@@ -1475,13 +1480,16 @@ footer p{
       width: 100%;
       height: 90vh;
     }
+    .container{
+      max-width: 90vw;
+  }
     .home .home-text h1{
-      font-size: 11.5vw;
-      line-height: 7vh;
+      font-size: 13vw;
+      line-height: 7.5vh;
     }
     .home .home-text p span{
-      font-size: 11.5vw;
-      line-height: 7vh;
+      font-size: 13vw;
+      line-height: 7.5vh;
     }
     /*contact*/
     .main-contact-cont{
