@@ -1404,6 +1404,14 @@ footer p{
       margin-left: 2vw;
       margin-top: 5vh;
     }
+    footer{
+      padding: 3vw;
+      margin-bottom: 0px;
+    }
+    .footer{
+      padding: 3vw;
+      margin-bottom: 0px;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -1588,6 +1596,10 @@ footer p{
       }
       /*FOOTER*/
       footer{
+        padding: 3vw;
+        margin-bottom: 0px;
+      }
+      .footer{
         padding: 3vw;
         margin-bottom: 0px;
       }
@@ -1888,6 +1900,15 @@ footer p{
       .form-control{
         padding: .9rem;
       }  
+      /*footer*/
+      footer{
+        padding: 3vw;
+        margin-bottom: 0px;
+      }
+      .footer{
+        padding: 3vw;
+        margin-bottom: 0px;
+      }
 }
 
 @media screen 
