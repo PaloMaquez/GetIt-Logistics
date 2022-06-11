@@ -11,7 +11,7 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-  background: rgba(255, 255, 255, 0.675);
+  background: rgb(255, 255, 255);
   width: 1.2em;
   height: 1em;
 }
@@ -479,66 +479,6 @@ span .animate-span{
 .adicional-title-span{
   font-size: 1.8vw;
 }
-.contact-service{
-  font-family: var(--font-family-subtitle);
-  font-size: 2vw;
-  text-align: center;
-}
-.contact-form_service{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 5vh auto;
-}
-#name-error{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: red;
-}
-#name-error i{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: var(--color-blue);
-}
-#email-error{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: red;
-}
-#email-error i{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: var(--color-blue);
-}
-#subject-error{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: red;
-}
-#subject-error i{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: var(--color-blue);
-}
-#message-error{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: red;
-}
-#message-error i{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: var(--color-blue);
-}
 .div-rush{
   display: grid;
   grid-template-rows: repeat(2,1fr);
@@ -599,6 +539,67 @@ span .animate-span{
   margin-top: -10vh;
   grid-column-start: 1;
 
+}
+/*contact services*/
+.contact-service{
+  font-family: var(--font-family-subtitle);
+  font-size: 2vw;
+  text-align: center;
+}
+.contact-form_service{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh auto;
+}
+#name-error{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: red;
+}
+#name-error i{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: var(--color-blue);
+}
+#email-error{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: red;
+}
+#email-error i{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: var(--color-blue);
+}
+#subject-error{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: red;
+}
+#subject-error i{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: var(--color-blue);
+}
+#message-error{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: red;
+}
+#message-error i{
+  display: flex;
+  justify-content: end;
+  flex-direction:row-reverse;
+  color: var(--color-blue);
 }
 /*--BUTTON--*/
 
