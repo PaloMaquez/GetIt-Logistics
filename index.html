@@ -27,7 +27,7 @@
 <body class="pic">
     <div id="preloader"></div>
     <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
                 <div class="container-fluid d-lg-flex">
                     <a class="navbar-brand" href="#">
                         <img src="./assets/img/TRANSPARENTBGPNG__-02-06.png" class="logo" alt="Get It Logistics Logo">
@@ -87,7 +87,6 @@
         let index=0;
         const textInTimer=3000,
         textOutTimer=2800;
-
         function animateText() {
             for(let i=0; i<txtsLen; i++){
                 txts[i].classList.remove("text-in","text-out");  
@@ -111,14 +110,13 @@
         }
         
         window.onload=animateText;
-</script>
+        </script>
 
-<script>
-var loader = document.getElementById('preloader');
-window.addEventListener('load' , function(){
-    loader.style.display = "none";
-})
-</script>
-
+        <script>
+        var loader = document.getElementById('preloader');
+        window.addEventListener('load' , function(){
+            loader.style.display = "none";
+        })
+        </script>   
 </body>
 </html>
