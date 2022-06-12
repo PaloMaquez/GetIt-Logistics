@@ -296,7 +296,7 @@ span .animate-span{
   width: 3px;
   padding: 10px 15px;
   height: 35px;
-  border: 2px solid black;
+  border: 2px solid #191919;
   border-radius: 25px;
   opacity: 0.75;
   box-sizing: content-box;
@@ -306,7 +306,7 @@ span .animate-span{
   width: 3px;
   height: 10px;
   border-radius: 25%;
-  background-color: black;
+  background-color: #191919;
   animation-name: scroll;
   animation-duration: 1.4s;
   animation-timing-function: cubic-bezier(.15,.41,.69,.94);
@@ -1076,9 +1076,14 @@ span .animate-span{
 .about{
   display: grid;
 }
+.main-about-us-img{
+  margin-left: 5vw;
+}
 .main-about-us img{
+  display: flex;
   background-size: cover;
   object-fit: cover;
+  justify-content: space-around;
   width: 55vw;
   height: 65vh;
   left: 5vw;
@@ -1845,6 +1850,9 @@ footer p{
           font-size: 2vw;
         }
       /*about*/
+      .main-about-us-img{
+        height: 30vh;
+      }
       .main-about-us{
         margin-bottom: -15vh;
       }
@@ -1863,6 +1871,10 @@ footer p{
         margin-left: 62vw;
       }
       .about-us_texts{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
         gap: 2rem;
         margin-bottom: 5vh;
         font-size: 2vw;
