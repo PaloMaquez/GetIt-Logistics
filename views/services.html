@@ -10,7 +10,7 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="../assets/style.css">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
-    <link rel="preload" as="image" href="" />
+    <!-- <link rel="preload" as="image" href="../assets/img/LOGO__-02.jpg" /> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,17 +67,19 @@
                   <p class="services-p-item">
                     Our company brings a full suite of services to the table to help you with business growth, from computer bank life cycle, repairs and securely erasing data to simply storing your assets with us until there's a need for them or the distribution of your goods. 
                   </p>
+                  <a href="#scroll-services">
                     <div class="scroll-downs">
                       <div class="mousey">
                         <div class="scroller"></div>
                       </div>
                     </div>
+                  </a>
               </section>
         </div>
-          <div class="container-cards">
+          <div class="container-cards" id="scroll-services">
                     <div class="band">
                       <div class="item-1">
-                            <a href="./delivered.html" class="card" style="background-image: url(../assets/img/pexels-tima-miroshnichenko-6169668\ \(1\).jpg);">
+                            <a href="./delivered.html" class="card" style="background-image: url(../assets/img/pictures/deliver.jpg);">
                               <div class="thumb" ></div>
                                 <h1 class="main-title-card"> <span class="get-it">Get IT</span><br>Delivered</h1>
                             </a>
@@ -122,6 +124,16 @@
       window.addEventListener('load' , function(){
           loader.style.display = "none";
       })
+      </script>
+      <script>
+        function bgChanger() {
+          if(this.scrollY > this.innerHeight / 1.5){
+            document.body.classList.add("bg-active");
+          }else{
+            document.body.classList.remove("bg-active");
+          }
+        }
+        window.addEventListener("scroll", bgChanger);
       </script>
 </body>
 </html>

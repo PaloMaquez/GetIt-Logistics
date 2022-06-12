@@ -37,7 +37,7 @@ html, body {
 /*-----SCROLLBAR-----*/
 
 ::-webkit-scrollbar {
-  background: rgb(255, 255, 255);
+  background: transparent;
   width: 1.2em;
   height: 1em;
 }
@@ -248,14 +248,13 @@ span .animate-span{
   align-items: center;
 }
 .section-services{
-  height: 100vh;
-  max-width: 80%;
+  height: 90vh;
+  max-width: 100%;
   display: block;
   text-align: justify;
   margin-top: 15vh;
   flex-direction: column;
   align-items: center;
-  scroll-snap-align: start;
 }
 .services-title{
   display: flex;
@@ -273,6 +272,13 @@ span .animate-span{
   text-align: justify;
   width: 45vw;
   margin-top: 15vh;
+}
+/*effect while scroll*/
+.bg-active{
+  background-color: #191919;
+}
+.background-grid{
+  transition: all 1s ease;
 }
 /*scroll down mouse*/
 .scroll-downs {
@@ -344,7 +350,7 @@ span .animate-span{
 }
 .card:hover {
     top: -5px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.344);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.888);
 }
 .card .thumb {
     padding-bottom: 50%;
@@ -414,7 +420,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service2{
-  background-image: url(../assets/img/pexels-tima-miroshnichenko-6169668\ \(1\).jpg);
+  background-image: url(../assets/img/pictures/deliver.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -1072,6 +1078,7 @@ span .animate-span{
 }
 .main-about-us img{
   background-size: cover;
+  object-fit: cover;
   width: 55vw;
   height: 65vh;
   left: 5vw;
@@ -1237,6 +1244,7 @@ p a:hover {
   flex-direction: row;
   width: 90vw;
   height: 70vh;
+  object-fit: cover;
   top: 13vh;
   margin-left: -10vw;
 }
@@ -1453,7 +1461,6 @@ footer p{
   text-align: center;
   margin: auto;
 }
-
 /*---------------------------------------------------------MEDIA QUERYS---------------------------------------------------------*/
 
 @media screen and (max-width: 450px) {
@@ -1792,6 +1799,24 @@ footer p{
       }
       .form-control{
         padding: .9rem;
+      }
+      /*services*/
+      .container-item1{
+        height: 80vh;
+        justify-content: space-around;
+        margin-top: 10vh;
+      }
+      .services-title{
+        font-size: 7vw;
+      }
+      .services-p-item{
+        text-align: center;
+        font-size: 3.5vw;
+        text-align: justify;
+        width: 75vw;
+        margin-top: 10vh;
+        letter-spacing: .5px;
+
       }
 }
 
