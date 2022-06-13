@@ -280,9 +280,6 @@ span .animate-span{
 .background-grid{
   transition: all 1s ease;
 }
-.colorrr{
-  background-color: #0071bb;
-}
 /*scroll down mouse*/
 .scroll-downs {
   display: flex;
