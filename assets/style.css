@@ -438,7 +438,7 @@ span .animate-span{
   background-color: #191919;
 }
 .main-img-service{
-  background-image: url(../assets/img/pictures/warehouse.jpg);
+  background-image: url(https://i.ibb.co/PG0HtLS/warehouse.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -449,7 +449,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service2{
-  background-image: url(../assets/img/pictures/deliver.jpg);
+  background-image: url(https://i.ibb.co/LSynXTZ/deliver.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
