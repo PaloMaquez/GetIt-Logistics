@@ -279,7 +279,7 @@ span .animate-span{
   font-size: 5vw;
   font-weight: bolder;
   background-color: #0071bb;
-  background-image: linear-gradient(90deg, #080026, #0071bb , #080026 ,#0071bb );
+  background-image: linear-gradient(90deg, #0071bb, #2cbbf2 , #0071bb ,#2cbbf2  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -292,11 +292,6 @@ span .animate-span{
   font-family: var(--font-family-subtitle);
   font-size: 1.4vw;
   width: 45vw;
-  /* background-color: #0071bb;
-  background-image: linear-gradient(90deg, #7a9fb8 , #ffffff ,#7a9fb8,#fcfcfc );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; */
   margin-top: 10vh;
 }
 /*effect while scroll*/
