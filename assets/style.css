@@ -1494,7 +1494,7 @@ footer p{
 }
 /*---------------------------------------------------------MEDIA QUERYS---------------------------------------------------------*/
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 559px) {
     .send-button {
     width: 70vw;
     }
@@ -1835,7 +1835,6 @@ footer p{
       .container-item1{
         height: 80vh;
         justify-content: space-around;
-        margin-top: 10vh;
       }
       .services-title{
         font-size: 7vw;
@@ -1847,7 +1846,18 @@ footer p{
         width: 75vw;
         margin-top: 10vh;
         letter-spacing: .5px;
-
+      }
+      .img-abstract{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        width: 90%;
+        height: 75%;
+        margin-top: 5vh;
+      }
+      .services-title{
+        font-size: 9vw;
       }
 }
 
