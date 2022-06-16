@@ -112,16 +112,16 @@
         <hr class="divition-hr">
         <h3 class="contact-service">Let's Get In Touch</h3>
         <div class="contact-form_service">
-            <form id="contact-form_service" method="POST" action="">
+            <form id="form" role="form" action="https://formspree.io/f/xwkyzzga"
+            method="POST">
                 <span id="name-error"></span>
-                <input type="text" name="name" class="form-control" placeholder="Full Name" required id="contact-name" onkeyup="validateName()">
+                <input type="text" name="name" data-callback="obligatory-call" class="form-control" placeholder="Full Name" required id="contact-name" onkeyup="validateName()">
                 <span id="email-error"></span>
-                <input type="text" name="email" class="form-control" placeholder="E-mail" required id="contact-email" onkeyup="validateEmail()">
-                <input type="text" name="subject" class="form-control" placeholder="Subject" required id="contact-subject" onkeyup="validateSubject()">
+                <input type="text" name="email" data-callback="obligatory-call" class="form-control" placeholder="E-mail" required id="contact-email" onkeyup="validateEmail()">
                 <span id="message-error"></span>
-                <textarea name="message" id="contact-message" class="form-control" cols="50" rows="2" placeholder="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
+                <textarea name="message" data-callback="obligatory-call" id="contact-message" class="form-control" cols="50" rows="2" placeholder="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
                 <!--BUTTON-->
-                <button class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit'><span class="default">Send IT</span><span class="success">Sent!
+                <button id="register-btn" onclick="return validateForm()" class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit' type="submit" ><span class="default">Send IT</span><span class="success">Sent!
                     <svg viewbox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                     </svg></span>
@@ -184,6 +184,26 @@
               });
             }
         </script>
+            <script>
+                const $form = document.querySelector('#form');
+        
+                $form.addEventListener('submit', handleSubmit)
+        
+                async function handleSubmit(event) {
+                    event.preventDefault()
+                    const form = new FormData (this)
+                    const response = await fetch (this.action,{
+                        method: this.method,
+                        body: form,
+                        headers: {
+                            'Accept' : 'aplication/json'
+                        }
+                    })
+                    if (response.ok) {
+                        this.reset()
+                    }
+                }
+            </script>
         <script>
             var nameError = document.getElementById('name-error');
             var emailError = document.getElementById('email-error');

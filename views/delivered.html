@@ -114,13 +114,12 @@
         <hr class="divition-hr">
             <h3 class="contact-service">Let's Get In Touch</h3>
                 <div class="contact-form_service">
-                    <form id="form" action="https://formspree.io/f/xwkyzzga" method="POST">
+                    <form id="form" role="form" action="https://formspree.io/f/xwkyzzga"
+                    method="POST">
                         <span id="name-error"></span>
                         <input type="text" name="name" data-callback="obligatory-call" class="form-control" placeholder="Full Name" required id="contact-name" onkeyup="validateName()">
                         <span id="email-error"></span>
                         <input type="text" name="email" data-callback="obligatory-call" class="form-control" placeholder="E-mail" required id="contact-email" onkeyup="validateEmail()">
-                        <span id="subject-error"></span>
-                        <input type="text" name="subject" data-callback="obligatory-call" class="form-control" placeholder="Subject" required id="contact-subject" onkeyup="validateSubject()">
                         <span id="message-error"></span>
                         <textarea name="message" data-callback="obligatory-call" id="contact-message" class="form-control" cols="50" rows="2" placeholder="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
                         <!--BUTTON-->
@@ -185,20 +184,9 @@
                 });
             });
         }
-        $('#form').submit(function(event) {
-        event.preventDefault();
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'registro'}).then(function(token) {
-                $('#form').prepend('<input type="hidden" name="token" value="' + token + '">');
-                $('#form').prepend('<input type="hidden" name="action" value="registro">');
-                $('#form').unbind('submit').submit();
-            });
-        });
-    });
     </script>
     <script>
         const $form = document.querySelector('#form');
-        const thankyou = document.querySelector('.thankyou')
 
         $form.addEventListener('submit', handleSubmit)
 
@@ -218,17 +206,9 @@
         }
     </script>
     <script>
-            function recaptcha_callback() {
-                var registerBtn = document.querySelector('#register-btn');
-                registerBtn.removeAttribute('disabled');
-                registerBtn.style.cursor = 'pointer';
-            }
-</script>
-    <script>
         var nameError = document.getElementById('name-error');
         var emailError = document.getElementById('email-error');
         var messageError = document.getElementById('message-error');
-        var subjectError = document.getElementById('subject-error')
 
         function validateName(){
         var name = document.getElementById('contact-name').value;
@@ -259,24 +239,11 @@
             emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
             return true;
         }
-
-        function validateSubject(){
-        var subject = document.getElementById('contact-subject').value;
-
-        if(subject.lenght == 0){
-            subjectError.innerHTML = 'Subject is required'
-            return false;
-        }
-        subjectError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-        return true;
-        }
-
         function validateMessage(){
             var message = document.getElementById('contact-message').value;
-            var required = 30;
-            var left = required - message.lenght;
-            if(left == 0){
-                messageError.innerHTML = left + 'More characters required';
+
+            if(message == 0){
+                messageError.innerHTML = 'Message is required';
                 return false;
             }else{
                 if(message.lenght < 30){
@@ -286,12 +253,6 @@
             }
             messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
                 return true;
-        }
-        function validateForm(){
-            if (!validatevalidateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
-                subjectError.innerHTML = 'Please fix errors to submit';
-                return false;
-            }
         }
     </script>
 </body>

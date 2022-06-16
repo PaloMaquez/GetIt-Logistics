@@ -456,7 +456,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service3{
-  background-image: url(https://i.ibb.co/ySKhSkR/ezgif-com-gif-maker.jpg);
+  background-image: url(https://i.ibb.co/Hz5zFKK/retrieve.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -479,7 +479,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service5{
-  background-image: url(https://i.ibb.co/fdykr6y/shutterstock-2044257446.jpg);
+  background-image: url(https://i.ibb.co/Dp8Nmc7/wiped.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -691,10 +691,8 @@ span .animate-span{
   flex-direction:row-reverse;
   color: var(--color-blue);
 }
-/*--BUTTON--*/
-/* #register-btn {
-  cursor: not-allowed;
-} */
+/* --BUTTON--*/
+
 .order {
   -webkit-appearance: none;
   -moz-appearance: none;
