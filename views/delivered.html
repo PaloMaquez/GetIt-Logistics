@@ -123,7 +123,7 @@
                         <span id="message-error"></span>
                         <textarea name="message" data-callback="obligatory-call" id="contact-message" class="form-control" cols="50" rows="2" placeholder="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
                         <!--BUTTON-->
-                        <button id="register-btn" onclick="return validateForm()" class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit' type="submit" ><span class="default">Send IT</span><span class="success">Sent!
+                        <button id="register-btn"  onclick="return validateForm()" class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit' type="submit" ><span class="default">Send IT</span><span class="success">Sent!
                             <svg viewbox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                             </svg></span>
@@ -205,6 +205,13 @@
             }
         }
     </script>
+            <script>
+                function recaptcha_callback() {
+                    var registerBtn = document.querySelector('#submit');
+                    registerBtn.removeAttribute('disabled');
+                    registerBtn.style.cursor = 'pointer';
+                }
+        </script>
     <script>
         var nameError = document.getElementById('name-error');
         var emailError = document.getElementById('email-error');

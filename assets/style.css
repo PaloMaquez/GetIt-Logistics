@@ -1345,7 +1345,9 @@ textarea {
 .alt-send-button:hover {
   transform: translate3d(0px, -29px, 0px);
 }
-
+#submit{
+  cursor: not-allowed;
+}
 /* Begin Right Contact Page */
 .direct-contact-container {
   align-items: center;
@@ -1506,6 +1508,10 @@ footer p{
       height: 30vh;
       margin-left: 2vw;
       margin-top: 5vh;
+    }
+    .home::before{
+      content: '';
+      height: 90%;
     }
     footer{
       padding: 3vw;

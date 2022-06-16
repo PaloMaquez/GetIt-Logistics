@@ -85,7 +85,7 @@
             <section id="contact">
             <div class="contact-wrapper">
             <!-- Left contact page --> 
-                <form id="contact-form" class="form-horizontal"  role="form" action="https://formspree.io/f/xwkyzzga"
+                <form id="contact-form" class="form-horizontal"  role="form" action="https://formspree.io/f/mnqwrkdv"
                 method="POST">
                     <div class="form-group">
                         <div class="col-sm-12">
@@ -101,13 +101,28 @@
                     </div>
                     <span id="message-error"></span>
                     <textarea class="form-control js-input" rows="3" placeholder="Message" name="message" required id="textarea-bottom" id="contact-message" onkeyup="validateMessage()"></textarea>
-                        <div class="g-recaptcha" data-sitekey="6LckFwAfAAAAAJpi_PR38ja0B3yUPybGbv024smX"></div>
-                    <button class="btn btn-primary send-button" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit' id="submit" type="submit" value="SEND">
+                    <!--reCAPTCHA-->
+                        <div class="g-recaptcha" data-sitekey="6LckFwAfAAAAAJpi_PR38ja0B3yUPybGbv024smX" data-callback="recaptcha_callback"></div>
+                    <!--Button-->
+                    <button class="btn btn-primary send-button" class="g-recaptcha" disabled data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit' id="submit" type="submit" value="SEND" data-bs-toggle="modal" data-bs-target="#exampleModal0">
                         <div class="alt-send-button">
                         <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
                         </div>
                     </button>
                 </form>
+                                <!-- Modal 0-->
+                                <div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img loading="lazy" src="../assets/img/thankyou.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
             <!-- Left contact page --> 
                 <div class="direct-contact-container">
                     <hr>
@@ -132,6 +147,13 @@
         <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../assets/main.js"></script>
+        <script>
+            function recaptcha_callback() {
+                var registerBtn = document.querySelector('#submit');
+                registerBtn.removeAttribute('disabled');
+                registerBtn.style.cursor = 'pointer';
+            }
+    </script>
     <script>
         var loader = document.getElementById('preloader-3');
         window.addEventListener('load' , function(){
