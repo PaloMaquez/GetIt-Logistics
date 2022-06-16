@@ -163,7 +163,7 @@
         });
     </script>
     <!--reCAPTCHA-->
-   <script>
+    <script>
     function onClick(e) {
       e.preventDefault();
       grecaptcha.ready(function() {
@@ -172,23 +172,8 @@
             var response = document.getElementById('token_generate');
             response.value = token;
         });
-      });
+        });
     }
-
-//     grecaptcha.ready(function() {
-//       document.getElementById('contactform').addEventListener("submit", function(event) {
-
-//         event.preventDefault();
-
-//         grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'submit'}).then(function(token) {
-
-//            document.getElementById("token_generate").value= token; 
-//            document.getElementById('contact-form').submit();
-//         });
-
-//       }, false);
-
-//   });
 </script>
 <script>
     var nameError = document.getElementById('name-error');
@@ -225,22 +210,6 @@
         emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
         return true;
     }
-
-    // function validateSubject(){
-    // var subject = document.getElementById('contact-subject').value;
-
-    // if(subject.lenght == 0){
-    //     subjectError.innerHTML = 'Subject is required'
-    //     return false;
-    // }
-    // if(!subject.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
-    //     subjectError.innerHTML = 'Subject is required'
-    //     return false;
-    // }
-    // subjectError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-    // return true;
-    // }
-
     function validateMessage(){
         var message = document.getElementById('contact-message').value;
         var required = 30;
@@ -258,7 +227,14 @@
         messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
         return true;
     }
-
+</script>
+<script>
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        e.target.elements.name.value = '';
+        e.target.elements.email.value = '';
+        e.target.elements.message.value = '';
+    });
 </script>
 </body>
 </html>  

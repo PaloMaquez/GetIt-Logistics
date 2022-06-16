@@ -467,7 +467,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service4{
-  background-image: url(https://i.ibb.co/HCr23Cg/shutterstock-1832128345.jpg);
+  background-image: url(https://i.ibb.co/JxqBCHc/kitted.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -692,6 +692,9 @@ span .animate-span{
   color: var(--color-blue);
 }
 /*--BUTTON--*/
+/* #register-btn {
+  cursor: not-allowed;
+} */
 .order {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1575,6 +1578,10 @@ footer p{
     .home .home-text p span{
       font-size: 13vw;
       line-height: 7.5vh;
+    }
+    .home::before{
+      content: '';
+      height: 90%;
     }
     /*contact*/
     .main-contact-cont{

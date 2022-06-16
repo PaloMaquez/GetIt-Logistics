@@ -112,41 +112,40 @@
         <div>
         </div>
         <hr class="divition-hr">
-        <h3 class="contact-service">Let's Get In Touch</h3>
-        <div class="contact-form_service">
-            <form id="contact-form_service" method="POST" action="">
-                <span id="name-error"></span>
-                <input type="text" name="name" class="form-control" placeholder="Full Name" required id="contact-name" onkeyup="validateName()">
-                <span id="email-error"></span>
-                <input type="text" name="email" class="form-control" placeholder="E-mail" required id="contact-email" onkeyup="validateEmail()">
-                <span id="name-error"></span>
-                <input type="text" name="subject" class="form-control" placeholder="Subject" required id="contact-subject" onkeyup="validateSubject()">
-                <span id="message-error"></span>
-                <textarea name="message" id="contact-message" class="form-control" cols="50" rows="2" placeholder="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
-                <!--BUTTON-->
-                <button class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit'><span class="default">Send IT</span><span class="success">Sent!
-                    <svg viewbox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                    </svg></span>
-                <div class="box"></div>
-                <div class="truck">
-                    <div class="back"></div>
-                    <div class="front">
-                    <div class="window"></div>
-                    </div>
-                    <div class="light top"></div>
-                    <div class="light bottom"></div>
-                </div>
-                <div class="lines"></div>
-                </button>
-            </form>
+            <h3 class="contact-service">Let's Get In Touch</h3>
+                <div class="contact-form_service">
+                    <form id="form" action="https://formspree.io/f/xwkyzzga" method="POST">
+                        <span id="name-error"></span>
+                        <input type="text" name="name" data-callback="obligatory-call" class="form-control" placeholder="Full Name" required id="contact-name" onkeyup="validateName()">
+                        <span id="email-error"></span>
+                        <input type="text" name="email" data-callback="obligatory-call" class="form-control" placeholder="E-mail" required id="contact-email" onkeyup="validateEmail()">
+                        <span id="subject-error"></span>
+                        <input type="text" name="subject" data-callback="obligatory-call" class="form-control" placeholder="Subject" required id="contact-subject" onkeyup="validateSubject()">
+                        <span id="message-error"></span>
+                        <textarea name="message" data-callback="obligatory-call" id="contact-message" class="form-control" cols="50" rows="2" placeholder="Message" required id="contact-message" onkeyup="validateMessage()"></textarea>
+                        <!--BUTTON-->
+                        <button id="register-btn" onclick="return validateForm()" class="order" class="g-recaptcha" data-sitekey="6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi" data-callback='onSubmit' data-action='submit' type="submit" ><span class="default">Send IT</span><span class="success">Sent!
+                            <svg viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg></span>
+                        <div class="box"></div>
+                        <div class="truck">
+                            <div class="back"></div>
+                            <div class="front">
+                            <div class="window"></div>
+                            </div>
+                            <div class="light top"></div>
+                            <div class="light bottom"></div>
+                        </div>
+                        <div class="lines"></div>
+                        </button>
+                    </form>
             <input type="hidden" name="token_generate" id="token_generate">
         </div>
     </main>
     <footer>
         <p>Copyright &copy 2022 Get It Logistics | All Rights Reserved.</p>
     </footer>
-    <script src="../assets/main.js"></script>
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -156,12 +155,12 @@
         window.addEventListener('load' , function(){
             loader.style.display = "none";
         })
-        </script>
-        <script>
+    </script>
+    <script>
             AOS.init();
-        </script>
-        <script>
-            $('.order').click(function(e) {
+    </script>
+    <script>
+    $('.order').click(function(e) {
     
     let button = $(this);
     
@@ -173,20 +172,58 @@
     }
     
     });
-        </script>
-        <!--reCAPTCHA-->
-       <script>
-        function onClick(e) {
-          e.preventDefault();
-          grecaptcha.ready(function() {
-            grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'submit'}).then(function(token) {
-                // Add your logic to submit to your backend server here.
-                var response = document.getElementById('token_generate');
-                response.value = token;
+    </script>
+    <!--reCAPTCHA-->
+    <script>
+    function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+                grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'submit'}).then(function(token) {
+                    // Add your logic to submit to your backend server here.
+                    var response = document.getElementById('token_generate');
+                    response.value = token;
+                });
             });
-          });
+        }
+        $('#form').submit(function(event) {
+        event.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LfGD1EgAAAAAFBSnZ-eUJuSdVSecWVfBuOQNnDi', {action: 'registro'}).then(function(token) {
+                $('#form').prepend('<input type="hidden" name="token" value="' + token + '">');
+                $('#form').prepend('<input type="hidden" name="action" value="registro">');
+                $('#form').unbind('submit').submit();
+            });
+        });
+    });
+    </script>
+    <script>
+        const $form = document.querySelector('#form');
+        const thankyou = document.querySelector('.thankyou')
+
+        $form.addEventListener('submit', handleSubmit)
+
+        async function handleSubmit(event) {
+            event.preventDefault()
+            const form = new FormData (this)
+            const response = await fetch (this.action,{
+                method: this.method,
+                body: form,
+                headers: {
+                    'Accept' : 'aplication/json'
+                }
+            })
+            if (response.ok) {
+                this.reset()
+            }
         }
     </script>
+    <script>
+            function recaptcha_callback() {
+                var registerBtn = document.querySelector('#register-btn');
+                registerBtn.removeAttribute('disabled');
+                registerBtn.style.cursor = 'pointer';
+            }
+</script>
     <script>
         var nameError = document.getElementById('name-error');
         var emailError = document.getElementById('email-error');
@@ -223,39 +260,39 @@
             return true;
         }
 
-        // function validateSubject(){
-        // var subject = document.getElementById('contact-subject').value;
+        function validateSubject(){
+        var subject = document.getElementById('contact-subject').value;
 
-        // if(subject.lenght == 0){
-        //     subjectError.innerHTML = 'Subject is required'
-        //     return false;
-        // }
-        // if(!subject.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
-        //     subjectError.innerHTML = 'Subject is required'
-        //     return false;
-        // }
-        // subjectError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-        // return true;
-        // }
+        if(subject.lenght == 0){
+            subjectError.innerHTML = 'Subject is required'
+            return false;
+        }
+        subjectError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        return true;
+        }
 
         function validateMessage(){
             var message = document.getElementById('contact-message').value;
             var required = 30;
             var left = required - message.lenght;
-
-            if(message.lenght == 0){
-                emailError.innerHTML = 'Email is required'
+            if(left == 0){
+                messageError.innerHTML = left + 'More characters required';
                 return false;
-            }
-
-            if (left > 0) {
-                messageError.innerHTML = left + 'More characters are required';
-                return false;
+            }else{
+                if(message.lenght < 30){
+                    MessageError.innerHTML = 'Message is required'
+                    return false;
+                }
             }
             messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-            return true;
+                return true;
         }
-
+        function validateForm(){
+            if (!validatevalidateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
+                subjectError.innerHTML = 'Please fix errors to submit';
+                return false;
+            }
+        }
     </script>
 </body>
 </html>
