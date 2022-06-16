@@ -1348,6 +1348,17 @@ textarea {
 #submit{
   cursor: not-allowed;
 }
+/*MODAL*/
+.thankyou{
+  width: 100%;
+}
+.modal-content{
+  background-color: #181818;
+}
+.btn-close{
+  background-color: var(--color-lightblue);
+}
+
 /* Begin Right Contact Page */
 .direct-contact-container {
   align-items: center;
