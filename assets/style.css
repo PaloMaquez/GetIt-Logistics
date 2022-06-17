@@ -667,18 +667,6 @@ span .animate-span{
   flex-direction:row-reverse;
   color: var(--color-blue);
 }
-#subject-error{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: red;
-}
-#subject-error i{
-  display: flex;
-  justify-content: end;
-  flex-direction:row-reverse;
-  color: var(--color-blue);
-}
 #message-error{
   display: flex;
   justify-content: end;
