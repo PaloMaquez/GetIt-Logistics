@@ -433,7 +433,7 @@ span .animate-span{
   background-color: #191919;
 }
 .main-img-service{
-  background-image: url(https://i.ibb.co/PG0HtLS/warehouse.jpg);
+  background-image: url(../assets/img/pictures/warehouse.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -444,7 +444,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service2{
-  background-image: url(https://i.ibb.co/LSynXTZ/deliver.jpg);
+  background-image: url(../assets/img/pictures/deliver.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -456,7 +456,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service3{
-  background-image: url(https://i.ibb.co/Hz5zFKK/retrieve.jpg);
+  background-image: url(../assets/img/pictures/retrieve.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -467,7 +467,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service4{
-  background-image: url(https://i.ibb.co/JxqBCHc/kitted.jpg);
+  background-image: url(../assets/img/pictures/kitted.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
@@ -479,7 +479,7 @@ span .animate-span{
   align-self: center;
 }
 .main-img-service5{
-  background-image: url(https://i.ibb.co/Dp8Nmc7/wiped.jpg);
+  background-image: url(../assets/img/pictures/wiped.jpg);
   width: 80%;
   height: 70vh;
   background-size: cover;
